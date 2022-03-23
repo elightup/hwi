@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hwi' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
+		<div class="site-branding aaa">
 			<a href="<?= esc_url( home_url() );?>">
 				<img class="logo-main" src="<?= esc_url( get_template_directory_uri() );?>/images/logo.svg" alt="">
 				<img class="logo-hover" src="<?= esc_url( get_template_directory_uri() );?>/images/logo-hover.svg" alt="">
