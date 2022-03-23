@@ -16,7 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -26,15 +28,16 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hwi' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding aaa">
-			<a href="<?= esc_url( home_url() );?>">
-				<img class="logo-main" src="<?= esc_url( get_template_directory_uri() );?>/images/logo.svg" alt="">
-				<img class="logo-hover" src="<?= esc_url( get_template_directory_uri() );?>/images/logo-hover.svg" alt="">
-			</a>
-			<?php bloginfo( 'name' ); ?>
-		</div><!-- .site-branding -->
-		<?php
-			get_template_part( 'template-parts/header/menu' );
-		?>
-
+		<div class="container">
+			<div class="site-branding">
+				<a href="<?= esc_url( home_url() );?>">
+					<img class="logo-main" src="<?= esc_url( get_template_directory_uri() );?>/images/logo.svg" alt="">
+					<img class="logo-hover" src="<?= esc_url( get_template_directory_uri() );?>/images/logo-hover.svg" alt="">
+				</a>
+				<?php bloginfo( 'name' ); ?>
+			</div><!-- .site-branding -->
+			<?php
+				get_template_part( 'template-parts/header/menu' );
+			?>
+		</div>
 	</header><!-- #masthead -->

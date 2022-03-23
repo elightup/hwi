@@ -7,13 +7,11 @@ html:focus-within {
 	scroll-behavior: smooth;
 }
 body {
-	max-width: 70ch;
-	padding: 0 1rem;
 	margin: auto;
 	background: var(--color-white);
 	font-family: var(--font);
 	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+	line-height: 1.36;
 	color: var(--b-txt);
 	-moz-tab-size: 4;
 	tab-size: 4;

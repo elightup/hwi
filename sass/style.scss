@@ -25,6 +25,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "mixins";
 
 @import "base/core";
+@import "base/bootstrap-grid";
 @import "base/slick";
 
 @import "components/menu";
+@import "components/header";

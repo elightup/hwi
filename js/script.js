@@ -3,8 +3,7 @@ jQuery( function ( $ ) {
 	var clickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 	function toggleMenu() {
-		const nav = document.querySelector( '#navBar' );
-		const navBar = document.querySelector( '.software-banner_menu' );
+		const nav = document.querySelector( '#site-navigation' );
 		if ( !nav ) {
 			return;
 		}
@@ -22,7 +21,6 @@ jQuery( function ( $ ) {
 				menu.setAttribute( 'aria-expanded', 'true' );
 			}
 			nav.classList.toggle( 'is-open' );
-			navBar.classList.toggle( 'is-open' );
 		} );
 	}
 
@@ -335,7 +333,7 @@ jQuery( function ( $ ) {
 	keepFocusInMenu();
 	toggleMenu();
 	closeMenu();
-	swiperSlider();
+	//swiperSlider();
 	//toggleSubmenu();
 	scrollToTop();
 	slickSlide();
@@ -345,5 +343,5 @@ jQuery( function ( $ ) {
 	tab();
 	switch_home();
 	goback();
-	pagination();
+	//pagination();
 } );
