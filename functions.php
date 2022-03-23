@@ -141,8 +141,8 @@ function hwi_enqueue_style( $name ) {
  * Enqueue scripts and styles.
  */
 function hwi_scripts() {
-	wp_enqueue_style( 'swiper-style', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
-	wp_enqueue_style( 'nacenopto-theme-slick', get_template_directory_uri() . '/css/slick.css' );
+	wp_enqueue_style( 'swiper-style', 'https://unpkg.com/swiper/swiper-bundle.min.css' ); // @codingStandardsIgnoreLine
+	wp_enqueue_style( 'nacenopto-theme-slick', get_template_directory_uri() . '/css/slick.css' ); // @codingStandardsIgnoreLine
 	if ( is_front_page() ) {
 		hwi_enqueue_style( 'home' );
 	}
