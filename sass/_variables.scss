@@ -1,0 +1,50 @@
+:root {
+	// Bootstrap Grid with padding on both sides.
+	// https://getbootstrap.com/docs/4.4/layout/overview/
+	--container: 1134px; // 1110px (content) + 12px * 2 (padding on both sides).
+
+	// https://tailwindcss.com/docs/font-family/
+	// sans-serif: use default WordPress admin font stack
+	--font: 'Open Sans', sans-serif;
+	--font-averta: Averta;
+
+	// https://tailwindcss.com/docs/font-size/
+	--text-xs: 13px;
+	--text-sm: 14px;
+	--text-md: 16px;
+	--text-lg: 18px;
+	--text-xl: 20px;
+	--text-1xl: 22px;
+	--text-2xl: 24px;
+	--text-3xl: 30px;
+	--text-4xl: 36px;
+	--text-5xl: 48px;
+	--text-6xl: 64px;
+
+	// https://tailwindcss.com/docs/text-color/
+	--color-black: #000000;
+	--color-white: #ffffff;
+	--color-accent: #0070C0; // blue-500
+	--color-dark: #1e5027; // gray-900
+	--hover: #F37021;
+	--color-base: #263238; // gray-700
+	--color-title: #212121;
+	--color-gray: #f5f4ee; // gray-500
+	--color-light: #455A64; // gray-300
+	--color-lighter: #edf2f7; // gray-200
+	--color-lightest: #f6f6f6; // gray-100
+	--color-red: #e0272a;
+    --color-yellow: #ffcb3d;
+    --color-orange: #f7941d;
+	--color-blue: #00a8ec;
+	--color-green: #21a043;
+
+	// https://tailwindcss.com/docs/box-shadow/
+	--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+
+	// https://tailwindcss.com/docs/letter-spacing/
+	--tracking-wide: .025em;
+	--tracking-wider: .05em;
+	--tracking-widest: .1em;
+}
