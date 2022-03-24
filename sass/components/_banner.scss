@@ -1,0 +1,80 @@
+.banner {
+	position: relative;
+	&__item {
+		position: relative;
+		video {
+			position: absolute;
+			width: 100%;
+			min-height: 100vh;
+			object-fit: cover;
+		}
+	}
+	&__inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 110px 0;
+		&--content {
+			color: var(--color-black);
+			width: 50%;
+			font-weight: 400;
+			margin-bottom: 150px;
+		}
+		h1 {
+			font-size: 48px;
+			font-weight: 300;
+			margin: 0 0 10px;
+			strong {
+				color: var(--color-accent);
+			}
+			em {
+				color: var(--color-white);
+				font-style: initial;
+			}
+		}
+		.seemore {
+			color: var(--color-white);
+			font-weight: 700;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			svg {
+				width: 7px;
+				fill: #fff;
+				margin-left: 10px;
+			}
+			&:hover {
+				color: var(--color-accent);
+				svg {
+					fill: var(--color-accent);
+				}
+			}
+		}
+	}
+	&__nav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: var(--color-white);
+		p {
+			font-size: 14px;
+			color: #BDBDBD;
+			margin: 0;
+		}
+		h2 {
+			margin: 0;
+			color: #BDBDBD;
+			font-size: 14px;
+		}
+		.slick-current {
+			h2, p {
+				color: var(--color-accent);
+			}
+		}
+		&--item {
+			padding: 35px 15px;
+		}
+	}
+}

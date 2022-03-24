@@ -202,3 +202,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+if ( ! function_exists( 'rwmb_meta' ) ) {
+	/**
+	 * Fallback function metabox.
+	 *
+	 * @return mixed
+	 */
+	function rwmb_meta( $key, $args = [], $post_id = null ) {
+		return null;
+	}
+}

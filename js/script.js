@@ -128,111 +128,23 @@ jQuery( function ( $ ) {
 	};
 
 	let slickSlide = () => {
-		$( '.banner-wrap' ).slick( {
+		$( '.banner__wrap' ).slick( {
 			slidesToShow: 1,
 			centerMode: false,
 			centerPadding: '60px',
 			dots: false,
 			arrows: false,
-			autoplay: true,
-			rows: 0,
-			autoplaySpeed: 5000,
-		} );
-
-		$( '.event-home_wrap' ).slick( {
-			centerMode: true,
-			centerPadding: '200px',
-			dots: true,
-			slidesToShow: 1,
-			autoplay: true,
-			arrows: false,
-			rows: 0,
-			adaptiveHeight: false,
-			prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fas fa-chevron-left'></i> Prev</button>",
-			nextArrow: "<button type='button' class='slick-next pull-right'>Next <i class='fas fa-chevron-right'></i></button>",
-			responsive: [
-				{
-					breakpoint: 1024,
-					settings: {
-						arrows: false,
-						centerMode: false,
-						centerPadding: '0px',
-						slidesToShow: 1
-					}
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						arrows: false,
-						centerMode: false,
-						centerPadding: '0px',
-						slidesToShow: 1
-					}
-				}
-			]
-		} );
-		$( '.environment_image' ).slick( {
-			slidesToShow: 3,
-			centerMode: false,
-			centerPadding: '60px',
-			dots: false,
-			arrows: true,
 			autoplay: false,
 			rows: 0,
 			autoplaySpeed: 5000,
-			prevArrow: "<button type='button' class='slick-prev pull-left'>Prev</button>",
-			nextArrow: "<button type='button' class='slick-next pull-right'>Next</button>",
-			responsive: [
-				{
-					breakpoint: 600,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 1
-					}
-				}
-			]
 		} );
-		$( '.history_wrap,.service-software__image,.environment__image' ).slick( {
-			slidesToShow: 1,
-			dots: false,
-			arrows: true,
-			autoplay: true,
+		$( '.banner__nav' ).slick( {
+			slidesToShow: 4,
+			asNavFor: '.banner__wrap',
+			dots: true,
+			centerMode: true,
+			focusOnSelect: true,
 			rows: 0,
-			autoplaySpeed: 5000,
-			prevArrow: "<button type='button' class='slick-prev pull-left'></button>",
-			nextArrow: "<button type='button' class='slick-next pull-right'></button>",
-			responsive: [
-				{
-					breakpoint: 600,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 1
-					}
-				}
-			]
-		} );
-		$( '.join-object_wrap' ).slick( {
-			slidesToShow: 3,
-			dots: false,
-			arrows: true,
-			autoplay: true,
-			rows: 0,
-			autoplaySpeed: 4000,
-			prevArrow: "<button type='button' class='slick-prev pull-left'>Prev</button>",
-			nextArrow: "<button type='button' class='slick-next pull-right'>Next</button>",
-			responsive: [
-				{
-					breakpoint: 600,
-					settings: {
-						arrows: false,
-						slidesToShow: 1
-					}
-				}
-			]
 		} );
 
 	};
