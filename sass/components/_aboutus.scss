@@ -1,0 +1,76 @@
+.about-home {
+	position: relative;
+	padding: 50px 0;
+	&__wrap {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&__left {
+		h2.title {
+			font-size: 14px;
+			text-transform: uppercase;
+			color: var(--color-black);
+			margin: 0 0 62px;
+			display: flex;
+			align-items: center;
+			span {
+				color: var(--color-accent);
+				margin-left: 10px;
+			}
+			&::before {
+				content: '';
+				display: block;
+				width: 86px;
+				height: 1px;
+				background: var(--color-black);
+				margin-right: 60px;
+			}
+		}
+	}
+	&__image {
+		position: relative;
+		width: 285px;
+		&--content {
+			background: var(--color-white);
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			padding: 40px;
+		}
+		h2 {
+			font-size: 144px;
+			text-transform: uppercase;
+			background: url('images/about-min.jpg') no-repeat center;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		h3 {
+			font-size: 14px;
+			text-transform: uppercase;
+			color: #BDBDBD;
+			margin: 0;
+		}
+	}
+	&__right {
+		h3 {
+			font-size: 14px;
+			color: #828282;
+			letter-spacing: 0.25em;
+			margin: 0;
+		}
+		h2 {
+			font-size: 48px;
+			color: var(--color-black);
+			line-height: 1.36;
+			strong {
+				color: var(--color-accent);
+			}
+		}
+		p {
+			color: #828282;
+		}
+	}
+}

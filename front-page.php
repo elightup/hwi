@@ -10,6 +10,7 @@ get_header( 'home' );
 	while ( have_posts() ) :
 		the_post();
 		get_template_part( 'template-parts/home/banner' );
+		get_template_part( 'template-parts/home/about' );
 	endwhile;
 	?>
 
