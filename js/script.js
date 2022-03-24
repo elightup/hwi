@@ -141,10 +141,19 @@ jQuery( function ( $ ) {
 		$( '.banner__nav' ).slick( {
 			slidesToShow: 4,
 			asNavFor: '.banner__wrap',
-			dots: true,
-			centerMode: true,
+			dots: false,
+			arrows: false,
 			focusOnSelect: true,
 			rows: 0,
+			responsive: [
+				{
+					breakpoint: 600,
+					settings: {
+						dots: true,
+						slidesToShow: 2
+					}
+				}
+			]
 		} );
 
 	};
@@ -227,17 +236,6 @@ jQuery( function ( $ ) {
 			}, 500 );
 		} );
 	}
-
-	jQuery( window ).scroll( function () {
-		if ( $( this ).scrollTop() > 50 ) {
-			jQuery( '#masthead' ).addClass( 'mnfixed' );
-			jQuery( '.software-banner_menu' ).addClass( 'mnfixed' );
-
-		} else {
-			jQuery( '#masthead' ).removeClass( 'mnfixed' );
-			jQuery( '.software-banner_menu' ).removeClass( 'mnfixed' );
-		}
-	} );
 
 	// var wow = new WOW();
 	// wow.init();

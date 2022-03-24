@@ -1,6 +1,5 @@
 <?php // @codingStandardsIgnoreLine
 $banners = rwmb_meta( 'slider' );
-$about   = rwmb_meta( 'about_us' );
 ?>
 <section class = 'banner' >
 	<div class = 'banner__wrap' >

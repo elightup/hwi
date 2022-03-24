@@ -58,6 +58,7 @@
 		bottom: 0;
 		right: 0;
 		background: var(--color-white);
+		padding: 0 35px;
 		p {
 			font-size: 14px;
 			color: #BDBDBD;
@@ -75,6 +76,42 @@
 		}
 		&--item {
 			padding: 35px 15px;
+		}
+	}
+}
+@media only screen and ( max-width: 767px ) {
+	.banner {
+		&__nav {
+			position: relative;
+		}
+		&__inner {
+			position: relative;
+			padding: 0;
+			&--content {
+				width: 100%;
+				margin: 0;
+			}
+			h1 {
+				font-size: 25px;
+				em {
+					color: var(--color-black);
+				}
+			}
+			.seemore {
+				color: var(--color-black);
+				svg {
+					fill: var(--color-black);
+				}
+			}
+		}
+		&__item {
+			img {
+				margin-bottom: 1.5rem;
+			}
+			video {
+				min-height: auto;
+				position: relative;
+			}
 		}
 	}
 }

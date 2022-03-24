@@ -1,11 +1,19 @@
 .site-header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	background: #fff;
 	.container {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 	}
+
+}
+.site-main {
+	margin-top: 65px;
 }
 .site-branding {
 	display: flex;

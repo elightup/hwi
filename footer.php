@@ -1,4 +1,4 @@
-<?php
+<?php // @codingStandardsIgnoreLine
 /**
  * The template for displaying the footer
  *
@@ -16,65 +16,18 @@
 			<div class="footer__top">
 				<div class="footer__right">
 					<div class="footer__logo">
-						<img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/logosvg_footer.svg" alt="">
-						<p class="title-logo">You dream, we build</p>
+						<?php the_custom_logo(); ?>
+						<?php bloginfo( 'name' ); ?>
 					</div>
 					<div class="footer__discover">
-						<p class="title-discover">Discover</p>
-					</div>
-					<div class="footer__menu">
-						<div class="footer__item">
-							<div class="icon-image">
-								<img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/Group-59.png" alt="">
-							</div>
-							<a href="#">Home</a>
-						</div>
-						<div class="footer__item">
-							<div class="icon-image">
-								<img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/Group-59.png" alt="">
-							</div>
-							<a href="#">About Us</a>
-						</div>
-						<div class="footer__item">
-							<div class="icon-image">
-								<img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/Group-59.png" alt="">
-							</div>
-							<a href="#">Project</a>
-						</div>
-						<div class="footer__item">
-							<div class="icon-image">
-								<img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/Group-59.png" alt="">
-							</div>
-							<a href="#">Partner</a>
-						</div>
-						<div class="footer__item">
-							<div class="icon-image">
-								<img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/Group-59.png" alt="">
-							</div>
-							<a href="#">news</a>
-						</div>
+						<?php dynamic_sidebar( 'discover' ); ?>
 					</div>
 				</div>
 				<div class="footer__contact">
-					<div class="footer__hwico">
-						<p class="title">HWICO JOINT STOCK COMPANY</p>
+					<div class="footer__info">
+						<?php dynamic_sidebar( 'footer' ) ?>
 					</div>
-					<h3 class="title-contact">Contact</h3>
-					<ul>
-						<li><a href="#"><img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/facebook_icon.png" alt=""></a></li>
-						<li><a href="#"><img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/twicter.png" alt=""></a></li>
-						<li><a href="#"><img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/in_icon.png" alt=""></a></li>
-						<li><a href="#"><img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/google_icon.png" alt=""></a></li>
-					</ul>
-					<div class="footer__infor">
-						<p>T: 038 858 7655</p>
-						<p>M: 0107484667</p>
-						<p>Mail: hwijung25@gmail.com</p>
-					</div>
-					<div class="footer__backtotop">
-						<div class="scroll-to-top">
-							<img src="http://localhost:8080/hwi/wp-content/uploads/2022/03/backtotop.png" alt="">
-						</div>
+					<div class="footer__backtotop scroll-to-top">
 						<p class="title-backtotop">Back to top</p>
 					</div>
 				</div>
