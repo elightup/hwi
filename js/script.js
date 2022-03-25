@@ -124,6 +124,33 @@ jQuery( function ( $ ) {
 				}
 			]
 		} );
+		$( '.partner__images' ).slick( {
+			centerMode: true,
+			centerPadding: '100px',
+			slidesToShow: 8,
+			arrows: false,
+			rows: 0,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '40px',
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '80px',
+						slidesToShow: 1
+					}
+				}
+			]
+		} );
 
 	};
 	function pagination() {

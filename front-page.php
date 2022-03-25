@@ -12,6 +12,7 @@ get_header( 'home' );
 		get_template_part( 'template-parts/home/banner' );
 		get_template_part( 'template-parts/home/about' );
 		get_template_part( 'template-parts/home/we-do' );
+		get_template_part( 'template-parts/home/partner' );
 	endwhile;
 	?>
 
