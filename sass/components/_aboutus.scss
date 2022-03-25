@@ -1,6 +1,6 @@
 .about-home {
 	position: relative;
-	padding: 50px 0;
+	padding: 130px 0 100px;
 	&__wrap {
 		position: relative;
 		display: grid;
@@ -71,6 +71,32 @@
 		}
 		p {
 			color: #828282;
+		}
+	}
+	&__number {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 60px;
+	}
+	&__item {
+		width: 25%;
+		&:last-child {
+			margin-right: 0;
+		}
+		h2 {
+			font-size: 72px;
+			color: var(--color-black);
+			font-weight: 300;
+			margin: 0;
+			line-height: 1.36;
+		}
+		p {
+			font-size: 14px;
+			color: #BDBDBD;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin: 0;
 		}
 	}
 }

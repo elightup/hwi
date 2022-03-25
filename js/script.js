@@ -75,37 +75,6 @@ jQuery( function ( $ ) {
 		} );
 	}
 
-	function openSearch() {
-		const button = document.querySelector( '.search-open' ),
-			input = document.querySelector( '.header-search .search-field' );
-
-		if ( !button ) {
-			return;
-		}
-
-		button.addEventListener( 'click', e => {
-			e.preventDefault();
-			document.body.classList.add( 'header-search-open' );
-			button.setAttribute( 'aria-expanded', 'true' );
-			input.focus();
-		} );
-	}
-
-	function closeSearch() {
-		const button = document.querySelector( '.search-close' ),
-			open = document.querySelector( '.search-open' );
-
-		if ( !button ) {
-			return;
-		}
-
-		button.addEventListener( 'click', e => {
-			e.preventDefault();
-			document.body.classList.remove( 'header-search-open' );
-			open.setAttribute( 'aria-expanded', 'false' );
-			open.focus();
-		} );
-	}
 	let swiperSlider = () => {
 		var swiper = new Swiper( ".project", {
 			slidesPerView: 1,
@@ -191,15 +160,7 @@ jQuery( function ( $ ) {
 			} );
 		}
 	}
-	function switch_home() {
-		$( '.switch_label .slider' ).click( function () {
-			if ( $( '#top_switch, .center_switch, .bottom_switch' ).hasClass( 'is-open' ) ) {
-				$( '#top_switch, .center_switch, .bottom_switch' ).removeClass( 'is-open' );
-			} else {
-				$( '#top_switch, .center_switch, .bottom_switch' ).addClass( 'is-open' );
-			}
-		} );
-	}
+
 	function scrollDown() {
 		if ( $( 'body' ).hasClass( 'page-template-front-page' ) ) {
 			$( '.icon_down' ).each( function () {
@@ -221,6 +182,29 @@ jQuery( function ( $ ) {
 				} );
 			} );
 		}
+	}
+
+	function counter_number() {
+		var a = 0;
+		if ( $( 'body' ).hasClass( 'page-template-front-page' ) ) {
+			$( window ).scroll( function () {
+				var oTop = $( '.about-home' ).offset().top - window.innerHeight;
+				if ( a == 0 && $( window ).scrollTop() > oTop ) {
+					$( '.count' ).each( function () {
+						$( this ).prop( 'Counter', 0 ).animate( {
+							Counter: $( this ).text()
+						}, {
+							duration: 4000,
+							easing: 'swing',
+							step: function ( now ) {
+								$( this ).text( Math.ceil( now ) );
+							}
+						} );
+					} );
+					a = 1;
+				}
+			} );
+		};
 	}
 
 	function scrollToTop() {
@@ -247,11 +231,9 @@ jQuery( function ( $ ) {
 	//toggleSubmenu();
 	scrollToTop();
 	slickSlide();
-	openSearch();
-	closeSearch();
 	scrollDown();
 	tab();
-	switch_home();
 	goback();
+	counter_number();
 	//pagination();
 } );
