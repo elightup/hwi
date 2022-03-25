@@ -11,6 +11,7 @@ get_header( 'home' );
 		the_post();
 		get_template_part( 'template-parts/home/banner' );
 		get_template_part( 'template-parts/home/about' );
+		get_template_part( 'template-parts/home/we-do' );
 	endwhile;
 	?>
 
