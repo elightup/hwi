@@ -10,7 +10,7 @@ $works = rwmb_meta( 'we_do_it' );
 				$title_work  = $work['title'];
 				$description = $work['description'];
 				$text_link   = $work['text_link'];
-				$url         = $work['text_link'];
+				$url         = $work['url'];
 				?>
 				<div class="we-do__item">
 					<div class="we-do__image">

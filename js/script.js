@@ -174,6 +174,16 @@ jQuery( function ( $ ) {
 			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
 			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
 		} );
+		$( '.testimonial__list' ).slick( {
+			slidesToShow: 1,
+			dots: true,
+			arrows: true,
+			autoplay: false,
+			rows: 0,
+			autoplaySpeed: 5000,
+			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
+			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
+		} );
 
 	};
 	function pagination() {

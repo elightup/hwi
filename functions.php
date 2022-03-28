@@ -183,6 +183,10 @@ function hwi_scripts() {
 
 		hwi_enqueue_style( 'about' );
 	}
+	if ( is_page_template( 'template/partner.php' ) ) {
+
+		hwi_enqueue_style( 'partner' );
+	}
 	wp_enqueue_style( 'hwi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'hwi-style', 'rtl', 'replace' );
 
