@@ -132,11 +132,20 @@ jQuery( function ( $ ) {
 			rows: 0,
 			responsive: [
 				{
+					breakpoint: 1366,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '100px',
+						slidesToShow: 5
+					}
+				},
+				{
 					breakpoint: 768,
 					settings: {
 						arrows: false,
 						centerMode: true,
-						centerPadding: '40px',
+						centerPadding: '100px',
 						slidesToShow: 3
 					}
 				},
@@ -150,6 +159,20 @@ jQuery( function ( $ ) {
 					}
 				}
 			]
+		} );
+		$( '.project-home__list' ).slick( {
+			slidesToShow: 1,
+			dots: true,
+			customPaging: function ( slider, i ) {
+				var thumb = $( slider.$slides[ i ] ).data();
+				return '0' + ( i + 1 );
+			},
+			arrows: true,
+			autoplay: false,
+			rows: 0,
+			autoplaySpeed: 5000,
+			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
+			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
 		} );
 
 	};

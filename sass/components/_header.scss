@@ -66,7 +66,16 @@
 		}
 	}
 }
-@media all and ( max-width: 767px) {
+@media all and ( max-width: 1024px) {
+	.header-menu {
+		background: none;
+		padding-right: 0px;
+		&::before {
+			display: none;
+		}
+	}
+}
+@media all and ( max-width: 992px) {
 	.header-menu {
 		background: none;
 		padding-right: 0px;

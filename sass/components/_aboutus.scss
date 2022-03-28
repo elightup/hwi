@@ -231,6 +231,13 @@
 		}
 	}
 }
+@media only screen and ( max-width: 992px ) {
+	.we-do {
+		&__wrap {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
 @media only screen and ( max-width: 767px) {
 	.about-home {
 		padding: 50px 0;
