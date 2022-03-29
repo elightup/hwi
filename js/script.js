@@ -187,9 +187,9 @@ jQuery( function ( $ ) {
 
 	};
 	function pagination() {
-		var newList = new List( 'utilities_wrap', {
-			valueNames: [ 'name' ],
-			page: 4,
+		var projectList = new List( 'projects-list', {
+			valueNames: [ 'projects__item' ],
+			page: 12,
 			pagination: true
 		} );
 
@@ -295,5 +295,8 @@ jQuery( function ( $ ) {
 	tab();
 	goback();
 	counter_number();
-	//pagination();
+	if ( $( 'body' ).hasClass( 'page-template-projects' ) ) {
+		pagination();
+	}
+
 } );

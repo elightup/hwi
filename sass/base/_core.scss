@@ -6,6 +6,12 @@
 html:focus-within {
 	scroll-behavior: smooth;
 }
+@font-face {
+	font-family: OpenSansHebrew;
+	src: url('fonts/opensanshebrew-regular.ttf') format('truetype'),
+	url('fonts/opensanshebrew-bold.ttf') format('truetype'),
+	url('fonts/opensanshebrew-light.ttf') format('truetype');
+}
 body {
 	margin: auto;
 	background: var(--color-white);

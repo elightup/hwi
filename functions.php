@@ -180,17 +180,18 @@ function hwi_scripts() {
 		hwi_enqueue_style( 'home' );
 	}
 	if ( is_page_template( 'template/about.php' ) ) {
-
 		hwi_enqueue_style( 'about' );
 	}
 	if ( is_page_template( 'template/partner.php' ) ) {
-
 		hwi_enqueue_style( 'partner' );
+	}
+	if ( is_page_template( 'template/projects.php' ) ) {
+		hwi_enqueue_style( 'project' );
+		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
 	}
 	wp_enqueue_style( 'hwi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'hwi-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'hwi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'hwi-slick', get_template_directory_uri() . '/js/slick.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'hwi-script', get_template_directory_uri() . '/js/script.js', [ 'jquery' ], '1.0', true );
 
