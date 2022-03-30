@@ -1,0 +1,192 @@
+.financial {
+	position: relative;
+	padding-top: 55px;
+	padding-bottom: 80px;
+
+	.text-year {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 1.3;
+		color: #2F3090;
+		text-align: center;
+	}
+
+	&__location {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.3;
+		text-align: center;
+		color: #828282;
+		margin: 0;
+	}
+
+	&__symbol {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-top: 23px;
+		margin-bottom: 84px;
+	}
+
+	&__profit {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-right: 50px;
+
+		&--bg {
+			background-color: #BDBDBD;
+			width: 35px;
+			height: 35px;
+			margin-right: 8px;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	&__over {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		&--bg {
+			background-color: #2F3090;
+			width: 35px;
+			height: 35px;
+			margin-right: 8px;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	&__slider {
+		margin-top: 30px;
+		display: flex;
+
+		.slick-left {
+			&::before {
+				content: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/Pure-CSS-Scroll-Animation-Arrow-2.png);
+			}
+		}
+
+		.slick-right {
+			&::before {
+				content: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/Pure-CSS-Scroll-Animation-Arrow-3.png);
+			}
+		}
+
+		.slick-right {
+			position: absolute;
+			bottom: 6%;
+			right: -7%;
+		}
+
+		.slick-left {
+			position: absolute;
+			left: -7%;
+			bottom: 6%;
+		}
+	}
+
+	&__item {
+		// margin-right: 57px;
+		// width: 150px !important;
+		padding: 0 20px;
+
+		&.slick-active {
+			.financial__item--count {
+				// display: block;
+				// visibility: unset;
+				opacity: 1;
+			}
+		}
+
+		&--count {
+			text-align: center;
+			// display: none;
+			// visibility: hidden;
+			opacity: 0;
+			transition: all 3s ease;
+
+			.count-gray {
+				background: #BDBDBD;
+				color: #fff;
+				font-size: 24px;
+				padding: 25px 30px;
+			}
+
+			.count-blue {
+				background: #2F3090;
+				color: #fff;
+				font-size: 24px;
+				padding: 25px 30px;
+			}
+		}
+
+		&--year {
+			font-weight: 700;
+			font-size: 64px;
+			line-height: 1.3;
+			color: #2F3090;
+			text-align: center;
+		}
+	}
+
+	&__banner {
+		position: relative;
+
+		h3 {
+			margin: 0;
+			position: absolute;
+			top: 14%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #FFFFFF;
+			font-weight: 400;
+			font-size: 96px;
+			line-height: 1.3;
+		}
+	}
+}
+
+@media(max-width:767px) {
+	.financial {
+		.team__title {
+			margin-right: 0;
+
+			.line {
+				margin-right: 20px;
+			}
+		}
+
+		&__banner {
+			h3 {
+				margin: 0;
+				position: absolute;
+				top: 28%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #FFFFFF;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 1.3;
+			}
+		}
+	}
+}
+
+@media(min-width:768px) and (max-width:1023px) {
+	.financial {
+		&__banner {
+			h3 {
+				top: 26%;
+				font-size: 36px;
+			}
+		}
+	}
+}

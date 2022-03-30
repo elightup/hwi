@@ -199,6 +199,58 @@ jQuery( function ( $ ) {
 			autoplaySpeed: 5000,
 		} );
 
+		$( '.seo__slider' ).slick( {
+			arrows: true,
+			dots: true,
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			prevArrow: "<button type='button' class='slick-left slick-arrow'><i class='fas fa-chevron-left'></i></button>",
+    		nextArrow: "<button type='button' class='slick-right slick-arrow'><i class='fas fa-chevron-right'></i></button>",
+		} );
+
+		$('.financial__slider').slick({
+			centerMode: true,
+			centerPadding: '175px',
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			rows: 0,
+			// infinite: false,
+			// fade: true,
+  			// cssEase: 'linear',
+			prevArrow: "<button type='button' class='slick-left slick-arrow'><i class='fas fa-chevron-left'></i></button>",
+    		nextArrow: "<button type='button' class='slick-right slick-arrow'><i class='fas fa-chevron-right'></i></button>",
+			responsive: [
+				{
+					breakpoint: 1023,
+					settings: {
+					  arrows: false,
+					  centerMode: true,
+					  centerPadding: '40px',
+					  slidesToShow: 3
+					}
+				},
+			  {
+				breakpoint: 768,
+				settings: {
+				  arrows: false,
+				  centerMode: true,
+				  centerPadding: '40px',
+				  slidesToShow: 3
+				}
+			  },
+			  {
+				breakpoint: 480,
+				settings: {
+				  arrows: false,
+				  centerMode: true,
+				  centerPadding: '40px',
+				  slidesToShow: 1
+				}
+			  }
+			]
+		  });
+
 	};
 	function pagination() {
 		var projectList = new List( 'projects-list', {
@@ -223,6 +275,23 @@ jQuery( function ( $ ) {
 
 	}
 
+	function accordion() {
+		var acc = document.getElementsByClassName( "accordion" );
+		var i;
+		for ( i = 0; i < acc.length; i++ ) {
+			acc[ i ].addEventListener( "click", function () {
+				this.classList.toggle( "active" );
+				$( this ).addClass( 'active' );
+				var panel = this.nextElementSibling;
+				if ( panel.style.display === "block" ) {
+					panel.style.display = "none";
+					$( this ).removeClass( 'active' );
+				} else {
+					panel.style.display = "block";
+				}
+			} );
+		}
+	  }
 	function tab() {
 		$( 'ul.tabs li' ).click( function () {
 			var tab_id = $( this ).attr( 'data-tab' );
@@ -317,5 +386,5 @@ jQuery( function ( $ ) {
 	if ( $( 'body' ).hasClass( 'page-template-projects' ) || $( 'body' ).hasClass( 'page-template-news' ) ) {
 		pagination();
 	}
-
+	accordion();
 } );

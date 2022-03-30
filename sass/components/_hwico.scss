@@ -1,0 +1,291 @@
+.hwico {
+	position: relative;
+	background-image: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/background_hwico-.jpg);
+	padding-top: 120px;
+	background-position-y: -155px;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&__title {
+		display: flex;
+		flex-wrap: wrap;
+
+		.line {
+			margin-right: 36px;
+			margin-top: -6px;
+		}
+
+		.title {
+			margin: 0;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 1.3;
+			letter-spacing: 0.25em;
+
+			p {
+				margin: 0;
+			}
+
+			strong {
+				color: var(--color-accent);
+			}
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 28px;
+		margin-top: 38px;
+	}
+
+	&__item {
+		border: 1px solid #828282;
+		padding: 28px;
+		position: relative;
+
+		&:hover {
+			background: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/buv-155525-1.png);
+			color: #fff;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				background: #2F3090;
+				opacity: 0.75;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+
+			.title {
+				color: #fff;
+			}
+
+			.icon-image {
+				display: none;
+			}
+
+			.icon-hover {
+				display: block;
+			}
+		}
+
+		&--title {
+			display: flex;
+			align-items: center;
+			margin-bottom: 28px;
+			position: relative;
+
+			.icon-image {
+				display: block;
+			}
+
+			.icon-hover {
+				display: none;
+			}
+
+			.title {
+				margin: 0;
+				font-size: 24px;
+				line-height: 1.3;
+				color: #828282;
+				font-weight: 700;
+				padding: 0 18px;
+			}
+		}
+
+		&--content {
+			font-size: 14px;
+			line-height: 1.3;
+			font-weight: 400;
+			margin: 0;
+			position: relative;
+		}
+	}
+
+	&__inner {
+		padding-top: 90px;
+		padding-bottom: 120px;
+
+		.location {
+			font-weight: 300;
+			font-size: 48px;
+			text-align: center;
+			line-height: 1.3;
+			margin: 0 0 52px 0;
+
+			p {
+				margin: 0;
+			}
+		}
+
+	}
+
+	&__total {
+		position: relative;
+
+		.background-icon {
+			position: absolute;
+			left: 42%;
+			bottom: -11%;
+		}
+	}
+
+	&__choose {
+		display: flex;
+		flex-wrap: wrap;
+
+
+
+		&--image {
+			width: 48%;
+			margin-right: 32px;
+		}
+
+		&--tab {
+			width: 48%;
+
+			details {
+				padding: 0;
+			}
+
+			details>summary {
+				width: 200px;
+				border: none;
+				cursor: pointer;
+			}
+
+			details[open]>summary {
+				margin-bottom: 0;
+
+				&::marker {
+					content: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/tab-bot.png);
+				}
+			}
+
+			details>p {
+				padding: 4px;
+				margin: 0;
+			}
+
+			summary {
+				position: relative;
+				margin: 0;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1.3;
+				color: #2F3090;
+
+				&::marker {
+					content: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/Group-59-1.png);
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					left: 28px;
+					bottom: -2px;
+					width: 415px;
+					border: 0.51px solid #BDBDBD;
+				}
+			}
+
+			.accordion-item {
+				margin-bottom: 34px;
+			}
+
+			.accordion {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+
+				.icon-accordion {
+					line-height: 0;
+					margin-right: 10px;
+				}
+
+
+			}
+
+			.panel {
+				margin-top: 15px;
+
+				h2 {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 1.3;
+					text-align: justify;
+					color: #828282;
+					padding: 0 28% 0 5%;
+					margin: 0;
+				}
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:767px) {
+	.hwico {
+		position: relative;
+
+		&__wrapper {
+			display: grid !important;
+			grid-template-columns: repeat(1, 1fr) !important;
+			grid-gap: 28px;
+		}
+
+		&__choose {
+			&--image {
+				width: 100% !important;
+				margin: 0 !important;
+			}
+
+			&--tab {
+				width: 100% !important;
+				margin-top: 50px;
+
+				summary {
+					&::after {
+						width: 100% !important;
+					}
+				}
+
+				h2 {
+					padding: 0 !important;
+				}
+
+				.panel {
+					padding: 0 28px;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width:768px) and (max-width:1023px) {
+	.hwico {
+		&__wrapper {
+			grid-template-columns: repeat(2, 1fr);
+
+		}
+
+		&__choose {
+			&--image {
+				width: 100%;
+				margin: 0;
+			}
+
+			&--tab {
+				width: 100%;
+				margin-top: 40px;
+			}
+		}
+	}
+}

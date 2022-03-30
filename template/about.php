@@ -11,6 +11,9 @@ get_header( 'home' );
 		the_post();
 		get_template_part( 'template-parts/about/history' );
 		get_template_part( 'template-parts/about/team' );
+		get_template_part( 'template-parts/about/hwico' );
+		get_template_part( 'template-parts/about/vision' );
+		get_template_part( 'template-parts/about/financial' );
 	endwhile;
 	?>
 
