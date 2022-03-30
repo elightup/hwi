@@ -189,6 +189,10 @@ function hwi_scripts() {
 		hwi_enqueue_style( 'project' );
 		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
 	}
+	if ( is_page_template( 'template/news.php' ) ) {
+		hwi_enqueue_style( 'news' );
+		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
+	}
 	wp_enqueue_style( 'hwi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'hwi-style', 'rtl', 'replace' );
 

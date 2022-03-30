@@ -184,6 +184,20 @@ jQuery( function ( $ ) {
 			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
 			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
 		} );
+		$( '.events__wrap' ).slick( {
+			slidesToShow: 1,
+			dots: true,
+			customPaging: function ( slider, i ) {
+				var thumb = $( slider.$slides[ i ] ).data();
+				return '0' + ( i + 1 );
+			},
+			arrows: true,
+			autoplay: true,
+			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
+			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
+			rows: 0,
+			autoplaySpeed: 5000,
+		} );
 
 	};
 	function pagination() {
