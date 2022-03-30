@@ -15,7 +15,8 @@ html:focus-within {
 body {
 	margin: auto;
 	background: var(--color-white);
-	font-family: var(--font);
+	//font-family: var(--font);
+	font-family: var(--font-sans);
 	text-rendering: optimizeSpeed;
 	line-height: 1.36;
 	color: var(--b-txt);

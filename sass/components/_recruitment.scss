@@ -1,0 +1,88 @@
+.recruitment {
+	position: relative;
+	background: #F2F2F2;
+	padding: 50px 0;
+	h2.title {
+		font-size: 36px;
+		color: var(--color-accent);
+		font-weight: 700;
+		margin: 0 0 17px;
+	}
+	.description {
+		color: #7C7C7C;
+		font-size: 14px;
+		margin: 0;
+	}
+	&__wrap {
+		position: relative;
+		margin-top: 30px;
+		.list {
+			position: relative;
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: repeat(4,1fr);
+		}
+	}
+	&__item {
+		position: relative;
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+			a {
+				color: var(--color-black);
+			}
+		}
+	}
+	&__image {
+		position: relative;
+		overflow: hidden;
+		border-radius: 25px;
+		&:after {
+			content: '';
+			display: block;
+			padding-bottom: 75%;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 1s ease;
+		}
+	}
+	&__content {
+		position: relative;
+		padding: 15px 0;
+		border-top: 1px solid #2F3090;
+		margin-top: 28px;
+		p.date {
+			font-size: 14px;
+			color: var(--color-black);
+			margin: 0;
+		}
+		h3 {
+			font-family: var(--font-sans);
+			font-size: 14px;
+			color: var(--color-accent);
+			margin: 13px 0 15px;
+			font-weight: 700;
+			@include set-line(2);
+			a {
+				font-family: var(--font-sans);
+				text-decoration: none;
+			}
+		}
+	}
+}
+@media only screen and ( max-width: 767px) {
+	.recruitment {
+		&__wrap {
+			.list {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
+}
