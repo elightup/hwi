@@ -10,6 +10,8 @@ get_header( 'home' );
 	while ( have_posts() ) :
 		the_post();
 		get_template_part( 'template-parts/news/events' );
+		get_template_part( 'template-parts/news/news-post' );
+		get_template_part( 'template-parts/news/recruitment' );
 	endwhile;
 	?>
 

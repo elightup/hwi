@@ -192,7 +192,7 @@ jQuery( function ( $ ) {
 				return '0' + ( i + 1 );
 			},
 			arrows: true,
-			autoplay: true,
+			autoplay: false,
 			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
 			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
 			rows: 0,
@@ -204,6 +204,11 @@ jQuery( function ( $ ) {
 		var projectList = new List( 'projects-list', {
 			valueNames: [ 'projects__item' ],
 			page: 12,
+			pagination: true
+		} );
+		var newsList = new List( 'news-list', {
+			valueNames: [ 'news-posts__item' ],
+			page: 8,
 			pagination: true
 		} );
 
@@ -309,7 +314,7 @@ jQuery( function ( $ ) {
 	tab();
 	goback();
 	counter_number();
-	if ( $( 'body' ).hasClass( 'page-template-projects' ) ) {
+	if ( $( 'body' ).hasClass( 'page-template-projects' ) || $( 'body' ).hasClass( 'page-template-news' ) ) {
 		pagination();
 	}
 
