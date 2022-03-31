@@ -196,6 +196,12 @@ function hwi_scripts() {
 		hwi_enqueue_style( 'news' );
 		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
 	}
+	if ( is_singular( 'projects' ) ) {
+		hwi_enqueue_style( 'single-projects' );
+		wp_enqueue_style( 'hwi-magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css' ); // @codingStandardsIgnoreLine
+		wp_enqueue_script( 'hwi-magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', [ 'jquery' ], '1.8', true );
+		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
+	}
 	wp_enqueue_style( 'hwi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'hwi-style', 'rtl', 'replace' );
 
@@ -235,6 +241,15 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+add_filter( 'use_block_editor_for_post', '__return_false' );
+add_filter( 'use_widgets_blog_editor', '__return_false' );
+add_action( 'wp_enqueue_scripts', function() {
+	// Remove CSS on the front end.
+	wp_dequeue_style( 'wp-block-library' );
+
+	// Remove inline global CSS on the front end.
+	wp_dequeue_style( 'global-styles' );
+}, 20 );
 
 if ( ! function_exists( 'rwmb_meta' ) ) {
 	/**

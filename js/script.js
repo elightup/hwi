@@ -75,27 +75,6 @@ jQuery( function ( $ ) {
 		} );
 	}
 
-	let swiperSlider = () => {
-		var swiper = new Swiper( ".project", {
-			slidesPerView: 1,
-			spaceBetween: 50,
-			centeredSlides: false,
-			loop: true,
-			autoplay: false,
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-			},
-			breakpoints: {
-				// when window width is >= 640px
-				640: {
-					slidesPerView: 3.5,
-					spaceBetween: 40
-				}
-			}
-		} );
-	};
-
 	let slickSlide = () => {
 		$( '.banner__wrap' ).slick( {
 			slidesToShow: 1,
@@ -268,6 +247,11 @@ jQuery( function ( $ ) {
 			page: 4,
 			pagination: true
 		} );
+		var galleryList = new List( 'gallery-image', {
+			valueNames: [ 'recruitment__item' ],
+			page: 6,
+			pagination: true
+		} );
 
 		$( '.nav-pagination' ).append( '<div class="btn-next"></div>' );
 		$( '.nav-pagination' ).prepend( '<div class="btn-prev"></div>' );
@@ -341,25 +325,6 @@ jQuery( function ( $ ) {
 				}
 			} );
 		};
-		// if ( $( 'body' ).hasClass( 'page-template-about' ) ) {
-		// 	$( window ).scroll( function () {
-		// 		var oTop = $( '.history' ).offset().top - window.innerHeight;
-		// 		if ( a == 0 && $( window ).scrollTop() > oTop ) {
-		// 			$( '.count' ).each( function () {
-		// 				$( this ).prop( 'Counter', 0 ).animate( {
-		// 					Counter: $( this ).text()
-		// 				}, {
-		// 					duration: 4000,
-		// 					easing: 'swing',
-		// 					step: function ( now ) {
-		// 						$( this ).text( Math.ceil( now ) );
-		// 					}
-		// 				} );
-		// 			} );
-		// 			a = 1;
-		// 		}
-		// 	} );
-		// };
 		if ( $( 'body' ).hasClass( 'page-template-about' ) ) {
 
 			$( window ).scroll( function () {
@@ -399,6 +364,18 @@ jQuery( function ( $ ) {
 	$( 'details' ).click( function ( event ) {
 		$( 'details' ).not( this ).removeAttr( "open" );
 	} );
+	function maginicpopup() {
+		$( '.popup-gallery' ).magnificPopup( {
+			delegate: 'a',
+			type: 'image',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [ 0, 1 ] // Will preload 0 - before current, and 1 after the current image
+			},
+
+		} );
+	}
 
 	// var wow = new WOW();
 	// wow.init();
@@ -412,7 +389,10 @@ jQuery( function ( $ ) {
 	tab();
 	goback();
 	counter_number();
-	if ( $( 'body' ).hasClass( 'page-template-projects' ) || $( 'body' ).hasClass( 'page-template-news' ) ) {
+	if ( $( 'body' ).hasClass( 'page-template-projects' ) || $( 'body' ).hasClass( 'page-template-news' ) || $( 'body' ).hasClass( 'single-projects' ) ) {
 		pagination();
+	}
+	if ( $( 'body' ).hasClass( 'single-projects' ) ) {
+		maginicpopup();
 	}
 } );

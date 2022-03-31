@@ -1,0 +1,11 @@
+.breadcrumbs {
+	position: relative;
+	color: #828282;
+	a {
+		text-decoration: none;
+	}
+	.breadcrumb--last {
+		color: var(--color-accent);
+		font-weight: 700;
+	}
+}
