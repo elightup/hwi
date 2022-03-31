@@ -1,7 +1,7 @@
 <?php // @codingStandardsIgnoreLine
-/*
+/**
 	Template Name: About
-*/
+ */
 get_header( 'home' );
 ?>
 <main id="primary" class="site-main">

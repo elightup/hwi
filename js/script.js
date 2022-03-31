@@ -201,12 +201,15 @@ jQuery( function ( $ ) {
 
 		$( '.seo__slider' ).slick( {
 			arrows: true,
-			dots: true,
+			dots: false,
 			infinite: true,
 			slidesToShow: 4,
 			slidesToScroll: 1,
-			prevArrow: "<button type='button' class='slick-left slick-arrow'><i class='fas fa-chevron-left'></i></button>",
-			nextArrow: "<button type='button' class='slick-right slick-arrow'><i class='fas fa-chevron-right'></i></button>",
+			autoplay: true,
+			autoplaySpeed: 5000,
+			rows: 0,
+			prevArrow: "<button type='button' class='slick-left slick-arrow'></button>",
+			nextArrow: "<button type='button' class='slick-right slick-arrow'></button>",
 		} );
 
 		$( '.financial__slider' ).slick( {
@@ -215,8 +218,8 @@ jQuery( function ( $ ) {
 			slidesToShow: 5,
 			slidesToScroll: 1,
 			rows: 0,
-			prevArrow: "<button type='button' class='slick-left slick-arrow'><i class='fas fa-chevron-left'></i></button>",
-			nextArrow: "<button type='button' class='slick-right slick-arrow'><i class='fas fa-chevron-right'></i></button>",
+			prevArrow: "<button type='button' class='slick-left slick-arrow'></button>",
+			nextArrow: "<button type='button' class='slick-right slick-arrow'></button>",
 			responsive: [
 				{
 					breakpoint: 1023,
@@ -277,23 +280,6 @@ jQuery( function ( $ ) {
 
 	}
 
-	function accordion() {
-		var acc = document.getElementsByClassName( "accordion" );
-		var i;
-		for ( i = 0; i < acc.length; i++ ) {
-			acc[ i ].addEventListener( "click", function () {
-				this.classList.toggle( "active" );
-				$( this ).addClass( 'active' );
-				var panel = this.nextElementSibling;
-				if ( panel.style.display === "block" ) {
-					panel.style.display = "none";
-					$( this ).removeClass( 'active' );
-				} else {
-					panel.style.display = "block";
-				}
-			} );
-		}
-	}
 	function tab() {
 		$( 'ul.tabs li' ).click( function () {
 			var tab_id = $( this ).attr( 'data-tab' );
@@ -355,6 +341,46 @@ jQuery( function ( $ ) {
 				}
 			} );
 		};
+		// if ( $( 'body' ).hasClass( 'page-template-about' ) ) {
+		// 	$( window ).scroll( function () {
+		// 		var oTop = $( '.history' ).offset().top - window.innerHeight;
+		// 		if ( a == 0 && $( window ).scrollTop() > oTop ) {
+		// 			$( '.count' ).each( function () {
+		// 				$( this ).prop( 'Counter', 0 ).animate( {
+		// 					Counter: $( this ).text()
+		// 				}, {
+		// 					duration: 4000,
+		// 					easing: 'swing',
+		// 					step: function ( now ) {
+		// 						$( this ).text( Math.ceil( now ) );
+		// 					}
+		// 				} );
+		// 			} );
+		// 			a = 1;
+		// 		}
+		// 	} );
+		// };
+		if ( $( 'body' ).hasClass( 'page-template-about' ) ) {
+
+			$( window ).scroll( function () {
+				var oTop = $( '.financial' ).offset().top - window.innerHeight;
+				if ( a == 0 && $( window ).scrollTop() > oTop ) {
+					console.log( 'kkk' );
+					$( '.count' ).each( function () {
+						$( this ).prop( 'Counter', 0 ).animate( {
+							Counter: $( this ).text()
+						}, {
+							duration: 4000,
+							easing: 'swing',
+							step: function ( now ) {
+								$( this ).text( Math.ceil( now ) );
+							}
+						} );
+					} );
+					a = 1;
+				}
+			} );
+		};
 	}
 
 	function scrollToTop() {
@@ -370,6 +396,9 @@ jQuery( function ( $ ) {
 			}, 500 );
 		} );
 	}
+	$( 'details' ).click( function ( event ) {
+		$( 'details' ).not( this ).removeAttr( "open" );
+	} );
 
 	// var wow = new WOW();
 	// wow.init();
@@ -377,8 +406,6 @@ jQuery( function ( $ ) {
 	keepFocusInMenu();
 	toggleMenu();
 	closeMenu();
-	//swiperSlider();
-	//toggleSubmenu();
 	scrollToTop();
 	slickSlide();
 	scrollDown();
@@ -388,5 +415,4 @@ jQuery( function ( $ ) {
 	if ( $( 'body' ).hasClass( 'page-template-projects' ) || $( 'body' ).hasClass( 'page-template-news' ) ) {
 		pagination();
 	}
-	accordion();
 } );

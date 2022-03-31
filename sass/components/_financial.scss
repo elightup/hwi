@@ -1,7 +1,6 @@
 .financial {
 	position: relative;
 	padding-top: 55px;
-	padding-bottom: 80px;
 
 	.text-year {
 		font-weight: 700;
@@ -70,13 +69,13 @@
 
 		.slick-left {
 			&::before {
-				content: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/Pure-CSS-Scroll-Animation-Arrow-2.png);
+				content: url('images/year-prev.png');
 			}
 		}
 
 		.slick-right {
 			&::before {
-				content: url(http://localhost:8080/hwi/wp-content/uploads/2022/03/Pure-CSS-Scroll-Animation-Arrow-3.png);
+				content: url('images/year-next.png');
 			}
 		}
 
@@ -94,24 +93,18 @@
 	}
 
 	&__item {
-		// margin-right: 57px;
-		// width: 150px !important;
 		padding: 0 20px;
 
 		&.slick-active {
 			.financial__item--count {
-				// display: block;
-				// visibility: unset;
 				opacity: 1;
 			}
 		}
 
 		&--count {
 			text-align: center;
-			// display: none;
-			// visibility: hidden;
 			opacity: 0;
-			transition: all 3s ease;
+			transition: all 2s ease;
 
 			.count-gray {
 				background: #BDBDBD;
@@ -125,6 +118,10 @@
 				color: #fff;
 				font-size: 24px;
 				padding: 25px 30px;
+			}
+			h3 {
+				margin: 0;
+				font-weight: 400;
 			}
 		}
 
@@ -159,9 +156,6 @@
 		.team__title {
 			margin-right: 0;
 
-			.line {
-				margin-right: 20px;
-			}
 		}
 
 		&__banner {

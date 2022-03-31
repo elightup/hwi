@@ -1,4 +1,4 @@
-<?php
+<?php // @codingStandardsIgnoreLine.
 $title_hwico      = rwmb_meta( 'title_hwico' );
 $groups_hwico     = rwmb_meta( 'group_hwico' );
 $location         = rwmb_meta( 'location' );
@@ -8,10 +8,7 @@ $groups_accordion = rwmb_meta( 'group_accordion' );
 <section id="hwico" class="hwico">
 	<div class="container">
 		<div class="hwico__title">
-			<div class="line">
-				<img src="<?php echo get_template_directory_uri() ?>/images/Line 1.png" alt="">
-			</div>
-			<h2 class="title"><?= $title_hwico ?></h2>
+			<h2 class="title"><?= esc_html( $title_hwico ) ?></h2>
 		</div>
 
 		<div class="hwico__wrapper">
@@ -19,10 +16,11 @@ $groups_accordion = rwmb_meta( 'group_accordion' );
 				<?php
 				$icon       = $group_hwico['icon'];
 				$icon_hover = $group_hwico['icon_hover'];
-				$title      = $group_hwico['title'];
+				$title      = $group_hwico['title']; // @codingStandardsIgnoreLine.
 				$content    = $group_hwico['content'];
+				$image      = $group_hwico['image'];
 				?>
-				<div class="hwico__item">
+				<div class="hwico__item" style="--bg-image: url('<?= esc_url( wp_get_attachment_url( $image ) );?>');">
 					<div class="hwico__item--title">
 						<div class="icon">
 							<?php
@@ -32,10 +30,10 @@ $groups_accordion = rwmb_meta( 'group_accordion' );
 							<img src="<?= esc_url( $icons ); ?>" alt="" class="icon-image">
 							<img src="<?= esc_url( $icons_hover ); ?>" alt="" class="icon-hover">
 						</div>
-						<p class="title"><?= $title; ?></p>
+						<p class="title"><?= esc_html( $title ); ?></p>
 					</div>
 					<div class="hwico__item--content">
-						<p><?= $content; ?></p>
+						<p><?= wp_kses_post( wpautop( $content ) ); ?></p>
 					</div>
 				</div>
 			<?php endforeach; ?>
@@ -43,7 +41,7 @@ $groups_accordion = rwmb_meta( 'group_accordion' );
 	</div>
 	<div class="hwico__inner">
 		<div class="container">
-			<h2 class="location"><?= $location; ?></h2>
+			<h2 class="location"><?= wp_kses_post( $location ); ?></h2>
 			<div class="hwico__total">
 				<div class="hwico__choose">
 					<div class="hwico__choose--image">
@@ -54,28 +52,34 @@ $groups_accordion = rwmb_meta( 'group_accordion' );
 					</div>
 					<div class="hwico__choose--tab">
 
-							<?php foreach ( $groups_accordion as $group_accordion ) : ?>
-								<?php
+							<?php
+							$i = 1;
+							foreach ( $groups_accordion as $group_accordion ) :
 								$title_accordion = $group_accordion['title_accordion'];
 								$accordion_body  = $group_accordion['accordion_body'];
+								if ( $i === 1 ) {
+									$open = 'open';
+								} else {
+									$open = '';
+								}
 								?>
-								<details>
+								<details <?= esc_html( $open )?>>
 								<summary>
-									<!-- <div class="icon-accordion"><img src="<?php // echo get_template_directory_uri() ?>/images/tab-right.png" alt=""></div> -->
-									<?= $title_accordion; ?>
+									<?= esc_html( $title_accordion ); ?>
 								</summary>
 
 								<div class="panel">
-									<div class="accordion-body">
-										<h2><?= $accordion_body; ?></h2>
-									</div>
+									<?= wp_kses_post( wpautop( $accordion_body ) ); ?>
 								</div>
 								</details>
-							<?php endforeach; ?>
+								<?php
+								$i++;
+								endforeach;
+							?>
 					</div>
 				</div>
 				<div class="background-icon">
-					<img src="<?php echo get_template_directory_uri() ?>/images/backgroundicon.png" alt="">
+					<img src="<?= esc_url( get_template_directory_uri() ) ?>/images/backgroundicon.png" alt="">
 				</div>
 			</div>
 		</div>

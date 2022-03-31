@@ -31,7 +31,7 @@
 					$title_number = $group_number['title_number'];
 					?>
 					<div class="item">
-						<p class="counter"><?= esc_html( $text_number ); ?></p>
+						<p class="count"><?= esc_html( $text_number ); ?></p>
 						<p class="title"><?= esc_html( $title_number ); ?></p>
 					</div>
 				<?php endforeach; ?>
