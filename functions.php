@@ -185,6 +185,9 @@ function hwi_scripts() {
 	if ( is_page_template( 'template/partner.php' ) ) {
 		hwi_enqueue_style( 'partner' );
 	}
+	if ( is_page_template( 'template/contact.php' ) ) {
+		hwi_enqueue_style( 'contact' );
+	}
 	if ( is_page_template( 'template/projects.php' ) ) {
 		hwi_enqueue_style( 'project' );
 		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
