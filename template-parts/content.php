@@ -10,54 +10,37 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				hwi_posted_on();
-				hwi_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php hwi_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'hwi' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hwi' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php hwi_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div class="container single_post">
+		<div class="single_post__header">
+			<div class="entry-header">
+				<?php the_tags( '<ul class="hashtag"><li>', '</li><li>', '</li></ul>' ); ?>
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<div class="entry-date">
+					<p class="date"><?= esc_html( get_the_date( 'd/m/Y' ) );?></p>
+					<div class="single_post__share">
+						<p>Share: </p>
+						<ul>
+							<li><a class="share" href="https://www.facebook.com/sharer/sharer.php?u=<?= esc_url( get_permalink() ); ?>" target="_blank"><?php Hwi_Icons::render( 'face' ) ?></a></li>
+							<li><a class="share" href="https://twitter.com/share?text=&url=<?= urlencode( get_permalink() ); ?>" target="_blank"><?php Hwi_Icons::render( 'twitter' ) ?></a></li>
+							<li><a class="share" href="https://www.linkedin.com/sharing/share-offsite/?url=<?= esc_url( get_permalink() );?>" target="_blank"><?php Hwi_Icons::render( 'linkedin' ) ?></a></li>
+							<li><a class="share" href="#" target="_blank"><?php Hwi_Icons::render( 'email' ) ?></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="entry-back">
+				<a class="goback" href='javascript:goback()'>< Back</a>
+			</div>
+		</div>
+		<div class="single_post__inner">
+			<div class="single_post__content">
+				<?php the_post_thumbnail(); ?>
+				<?php the_content(); ?>
+			</div>
+			<div class="single_post__sidebar">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
+<?php hwi_recent_posts(); ?>

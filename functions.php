@@ -164,6 +164,8 @@ function hwi_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	require_once get_template_directory() . '/inc/widgets/class-hwi-posts-widget.php';
+	register_widget( 'hwi_Posts_Widget' );
 }
 add_action( 'widgets_init', 'hwi_widgets_init' );
 function hwi_enqueue_style( $name ) {
@@ -174,8 +176,7 @@ function hwi_enqueue_style( $name ) {
  * Enqueue scripts and styles.
  */
 function hwi_scripts() {
-	wp_enqueue_style( 'swiper-style', 'https://unpkg.com/swiper/swiper-bundle.min.css' ); // @codingStandardsIgnoreLine
-	wp_enqueue_style( 'nacenopto-theme-slick', get_template_directory_uri() . '/css/slick.css' ); // @codingStandardsIgnoreLine
+	wp_enqueue_style( 'hwi-theme-slick', get_template_directory_uri() . '/css/slick.css' ); // @codingStandardsIgnoreLine
 	if ( is_front_page() ) {
 		hwi_enqueue_style( 'home' );
 	}
@@ -201,6 +202,9 @@ function hwi_scripts() {
 		wp_enqueue_style( 'hwi-magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css' ); // @codingStandardsIgnoreLine
 		wp_enqueue_script( 'hwi-magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', [ 'jquery' ], '1.8', true );
 		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
+	}
+	if ( is_singular( 'post' ) ) {
+		hwi_enqueue_style( 'single-post' );
 	}
 	wp_enqueue_style( 'hwi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'hwi-style', 'rtl', 'replace' );

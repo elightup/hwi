@@ -163,3 +163,36 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+function hwi_recent_posts() {
+	$terms = get_the_category( get_the_ID() );
+	$ids   = array_map( function( $term ) {
+		return $term->term_id;
+	}, $terms );
+
+	$args  = array(
+		'posts_per_page' => 4,
+		'post__not_in'   => array( get_the_ID() ),
+		'category__in'   => $ids,
+	);
+	$query = new WP_Query( $args );
+	if ( ! $query->have_posts() ) {
+		return;
+	}
+	?>
+	<section class="related-posts">
+		<div class="container">
+			<h3 class="related-posts__heading"><?php esc_html_e( 'Related Posts', 'hwi' ) ?></h3>
+			<div class="hwi-posts">
+				<?php
+				while ( $query->have_posts() ) :
+					$query->the_post();
+					get_template_part( 'template-parts/content', 'related' );
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</div>
+		</div>
+	</section>
+	<?php
+}
