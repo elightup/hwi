@@ -196,3 +196,46 @@ function hwi_recent_posts() {
 	</section>
 	<?php
 }
+
+function hwi_recruitment_posts() {
+	$terms = get_the_category( get_the_ID() );
+	$ids   = array_map( function( $term ) {
+		return $term->term_id;
+	}, $terms );
+
+	$args  = array(
+		'posts_per_page' => -1,
+		'post__not_in'   => array( get_the_ID() ),
+		'category__in'   => $ids,
+	);
+	$query = new WP_Query( $args );
+	if ( ! $query->have_posts() ) {
+		return;
+	}
+	?>
+	<section class="related-posts">
+		<div class="container">
+			<div class="hwi-recruitment">
+				<?php
+				while ( $query->have_posts() ) :
+					$query->the_post();
+					$field = rwmb_meta( 'recruitment' );
+					?>
+					<div class="recruitment__item">
+						<div class="recruitment__image">
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+						</div>
+						<div class="recruitment__content">
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<p class="recruitment-field"><?= esc_html( $field );?></p>
+						</div>
+					</div>
+					<?php
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</div>
+		</div>
+	</section>
+	<?php
+}

@@ -177,6 +177,35 @@ jQuery( function ( $ ) {
 			rows: 0,
 			autoplaySpeed: 5000,
 		} );
+		$( '.hwi-recruitment' ).slick( {
+			slidesToShow: 4,
+			dots: true,
+			customPaging: function ( slider, i ) {
+				var thumb = $( slider.$slides[ i ] ).data();
+				return '0' + ( i + 1 );
+			},
+			arrows: true,
+			autoplay: false,
+			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
+			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
+			rows: 0,
+			autoplaySpeed: 5000,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
+		} );
 
 		$( '.seo__slider' ).slick( {
 			arrows: true,
@@ -232,11 +261,6 @@ jQuery( function ( $ ) {
 
 	};
 	function pagination() {
-		var projectList = new List( 'projects-list', {
-			valueNames: [ 'projects__item' ],
-			page: 12,
-			pagination: true
-		} );
 		var newsList = new List( 'news-list', {
 			valueNames: [ 'news-posts__item' ],
 			page: 8,
@@ -330,7 +354,7 @@ jQuery( function ( $ ) {
 			$( window ).scroll( function () {
 				var oTop = $( '.financial' ).offset().top - window.innerHeight;
 				if ( a == 0 && $( window ).scrollTop() > oTop ) {
-					console.log( 'kkk' );
+					//console.log( 'kkk' );
 					$( '.count' ).each( function () {
 						$( this ).prop( 'Counter', 0 ).animate( {
 							Counter: $( this ).text()
@@ -389,7 +413,7 @@ jQuery( function ( $ ) {
 	tab();
 	goback();
 	counter_number();
-	if ( $( 'body' ).hasClass( 'page-template-projects' ) || $( 'body' ).hasClass( 'page-template-news' ) || $( 'body' ).hasClass( 'single-projects' ) ) {
+	if ( $( 'body' ).hasClass( 'page-template-news' ) || $( 'body' ).hasClass( 'single-projects' ) ) {
 		pagination();
 	}
 	if ( $( 'body' ).hasClass( 'single-projects' ) ) {

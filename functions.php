@@ -155,6 +155,17 @@ function hwi_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name'          => esc_html__( 'Form contacs', 'hwi' ),
+			'id'            => 'form-contact',
+			'description'   => esc_html__( 'Add widgets here.', 'hwi' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => esc_html__( 'Footer', 'hwi' ),
 			'id'            => 'footer',
 			'description'   => esc_html__( 'Add widgets here.', 'hwi' ),
@@ -189,10 +200,6 @@ function hwi_scripts() {
 	if ( is_page_template( 'template/contact.php' ) ) {
 		hwi_enqueue_style( 'contact' );
 	}
-	if ( is_page_template( 'template/projects.php' ) ) {
-		hwi_enqueue_style( 'project' );
-		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
-	}
 	if ( is_page_template( 'template/news.php' ) ) {
 		hwi_enqueue_style( 'news' );
 		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
@@ -203,7 +210,7 @@ function hwi_scripts() {
 		wp_enqueue_script( 'hwi-magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', [ 'jquery' ], '1.8', true );
 		wp_enqueue_script( 'hwi-list', get_template_directory_uri() . '/js/list.min.js', array(), _S_VERSION, true );
 	}
-	if ( is_singular( 'post' ) ) {
+	if ( is_singular( 'post' ) || is_archive() ) {
 		hwi_enqueue_style( 'single-post' );
 	}
 	wp_enqueue_style( 'hwi-style', get_stylesheet_uri(), array(), _S_VERSION );
@@ -231,6 +238,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
+require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/class-hwi-icons.php';
 
