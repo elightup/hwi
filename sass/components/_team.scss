@@ -227,6 +227,10 @@
 		&__title {
 			.title {
 				margin-bottom: 20px;
+
+				&::before {
+					display: none;
+				}
 			}
 		}
 	}
