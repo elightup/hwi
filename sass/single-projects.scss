@@ -211,12 +211,13 @@
 		}
 
 		&__image {
+			width: 100%;
 
 			&:nth-child(1),
 			&:nth-child(2),
 			&:nth-child(5),
 			&:nth-child(6) {
-				width: 50%;
+				width: 100%;
 			}
 
 			&--item {

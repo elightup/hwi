@@ -152,6 +152,15 @@ jQuery( function ( $ ) {
 			autoplaySpeed: 5000,
 			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
 			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
+			responsive: [
+				{
+					breakpoint: 600,
+					settings: {
+						dots: true,
+						arrows: false
+					}
+				}
+			]
 		} );
 		$( '.testimonial__list' ).slick( {
 			slidesToShow: 1,
@@ -218,6 +227,21 @@ jQuery( function ( $ ) {
 			rows: 0,
 			prevArrow: "<button type='button' class='slick-left slick-arrow'></button>",
 			nextArrow: "<button type='button' class='slick-right slick-arrow'></button>",
+			responsive: [
+				{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 3,
+						dots: true,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+			]
 		} );
 
 		$( '.financial__slider' ).slick( {
@@ -234,7 +258,7 @@ jQuery( function ( $ ) {
 					settings: {
 						arrows: false,
 						centerMode: true,
-						centerPadding: '40px',
+						centerPadding: '170px',
 						slidesToShow: 3
 					}
 				},
@@ -242,7 +266,7 @@ jQuery( function ( $ ) {
 					breakpoint: 768,
 					settings: {
 						arrows: false,
-						centerMode: true,
+						centerMode: false,
 						centerPadding: '40px',
 						slidesToShow: 3
 					}
@@ -251,9 +275,10 @@ jQuery( function ( $ ) {
 					breakpoint: 480,
 					settings: {
 						arrows: false,
-						centerMode: true,
+						centerMode: false,
 						centerPadding: '40px',
-						slidesToShow: 1
+						slidesToShow: 1,
+						autoplay: true
 					}
 				}
 			]

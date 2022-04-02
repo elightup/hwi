@@ -20,6 +20,7 @@
 			align-items: center;
 			color: var(--color-accent);
 			text-transform: uppercase;
+
 			&::before {
 				content: '';
 				display: block;
@@ -115,6 +116,7 @@
 			text-align: center;
 			line-height: 1.3;
 			margin: 0 0 52px 0;
+
 			strong {
 				color: var(--color-accent);
 			}
@@ -153,6 +155,7 @@
 
 			details>summary {
 				cursor: pointer;
+
 				&::marker {
 					content: url('images/arrow_radius.png');
 					transition: all 0.5s;
@@ -194,6 +197,7 @@
 			.panel {
 				margin-top: 15px;
 				padding-left: 25px;
+
 				p {
 					font-weight: 400;
 					font-size: 14px;
@@ -235,6 +239,10 @@
 
 				h2 {
 					padding: 0 !important;
+				}
+
+				details {
+					width: 100%;
 				}
 
 				.panel {

@@ -14,6 +14,8 @@
 
 	&__title {
 		margin-right: 65px;
+		margin-bottom: 30px;
+
 		.title {
 			margin: 0;
 			font-weight: 700;
@@ -22,6 +24,7 @@
 			letter-spacing: 0.25em;
 			display: flex;
 			align-items: center;
+
 			&::before {
 				content: '';
 				display: block;
@@ -31,7 +34,8 @@
 				margin-right: 15px;
 			}
 
-			strong, span {
+			strong,
+			span {
 				color: var(--color-accent);
 				margin-left: 8px;
 			}
@@ -73,11 +77,14 @@
 		&--text {
 			background-color: #fff;
 			position: relative;
-			width: 250px;
 			text-align: right;
 			padding: 30px 25px 10px 0;
 			margin-top: -94px;
-			margin-left: 201px;
+			margin-left: 50%;
+
+			@media only screen and (max-width: 1600px) {
+				margin-left: 10%;
+			}
 
 			&:hover {
 				display: none;
@@ -202,7 +209,25 @@
 		.slick-arrow {
 			display: none !important;
 		}
+
+	}
+
+	.seo {
+		&__item {
+			&--text {
+				//width: 80%;
+				margin-left: 30%;
+			}
+		}
+	}
+
+	.team {
+		padding-top: 20px !important;
+
+		&__title {
+			.title {
+				margin-bottom: 20px;
+			}
+		}
 	}
 }
-
-@media(min-width:768px) and (max-width:1023px) {}

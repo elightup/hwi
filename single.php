@@ -11,8 +11,10 @@ get_header();
 
 $postID    = get_the_ID(); // @codingStandardsIgnoreLine
 $categoris = get_the_terms( $postID, 'category' ); // @codingStandardsIgnoreLine
-foreach ( $categoris as $category ) {
-	$categoris_id = $category->term_id;
+if ( $categoris !== false ) {
+	foreach ( $categoris as $category ) {
+		$categoris_id = $category->term_id;
+	}
 }
 ?>
 

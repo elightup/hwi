@@ -411,4 +411,27 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
+
+	.single_recruitment {
+		&__header {
+			position: relative;
+			padding-bottom: 20px;
+
+			.entry-header {
+				width: 100%;
+			}
+
+			.entry-back {
+				display: none;
+			}
+		}
+
+		&__content {
+			width: 100%;
+		}
+
+		&__sidebar {
+			width: 100%;
+		}
+	}
 }
