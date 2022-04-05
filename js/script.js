@@ -243,6 +243,33 @@ jQuery( function ( $ ) {
 				}
 			]
 		} );
+		$( '.we-do__wrap' ).slick( {
+			arrows: false,
+			dots: false,
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			autoplay: false,
+			autoplaySpeed: 5000,
+			rows: 0,
+			prevArrow: "<button type='button' class='slick-left slick-arrow'></button>",
+			nextArrow: "<button type='button' class='slick-right slick-arrow'></button>",
+			responsive: [
+				{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+					}
+				}
+			]
+		} );
 
 		$( '.financial__slider' ).slick( {
 			infinite: false,
