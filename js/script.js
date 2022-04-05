@@ -245,8 +245,7 @@ jQuery( function ( $ ) {
 		} );
 
 		$( '.financial__slider' ).slick( {
-			centerMode: true,
-			centerPadding: '175px',
+			infinite: false,
 			slidesToShow: 5,
 			slidesToScroll: 1,
 			rows: 0,
@@ -257,8 +256,6 @@ jQuery( function ( $ ) {
 					breakpoint: 1023,
 					settings: {
 						arrows: false,
-						centerMode: true,
-						centerPadding: '170px',
 						slidesToShow: 3
 					}
 				},
@@ -266,8 +263,6 @@ jQuery( function ( $ ) {
 					breakpoint: 768,
 					settings: {
 						arrows: false,
-						centerMode: false,
-						centerPadding: '40px',
 						slidesToShow: 3
 					}
 				},
@@ -275,7 +270,7 @@ jQuery( function ( $ ) {
 					breakpoint: 480,
 					settings: {
 						arrows: false,
-						centerMode: false,
+						//centerMode: false,
 						centerPadding: '40px',
 						slidesToShow: 1,
 						autoplay: true

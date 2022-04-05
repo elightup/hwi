@@ -1,9 +1,14 @@
+.breadcrumbs_page {
+	position: relative;
+	margin-bottom: 20px;
+	padding-top: 60px;
+}
+
 .history {
 	position: relative;
 	padding-top: 139px;
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 89px !important;
 
 	&__title {
 		border: 1px solid #BDBDBD;

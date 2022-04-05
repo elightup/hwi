@@ -67,6 +67,10 @@
 		margin-top: 30px;
 		display: flex;
 
+		.slick-list {
+			padding: 0 200px;
+		}
+
 		.slick-left {
 			&::before {
 				content: url('images/year-prev.png');

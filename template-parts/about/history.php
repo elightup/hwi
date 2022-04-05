@@ -3,6 +3,11 @@
 	$images_history  = rwmb_meta( 'image_history' );
 	$groups_number   = rwmb_meta( 'number' );
 ?>
+<div class="breadcrumbs_page">
+	<div class="container">
+		<?php echo do_shortcode( '[slim_seo_breadcrumbs separator="/"]' ); ?>
+	</div>
+</div>
 <section id="history" class="container history">
 		<div class="history__title">
 			<p>01</p>
