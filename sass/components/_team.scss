@@ -7,6 +7,7 @@
 		flex-wrap: wrap;
 		--width: 100vw;
 		margin-right: calc(51% - var(--width)/2);
+		margin-bottom: 15px;
 
 		.banner {
 			width: 80%;
@@ -58,6 +59,11 @@
 			background: url('images/next.png') no-repeat;
 			background-size: contain;
 
+			&:hover {
+				background: url('images/next-hover.png');
+				opacity: 1;
+			}
+
 			@media only screen and (max-width: 1600px) {
 				left: 18%;
 			}
@@ -71,6 +77,11 @@
 			height: 47px;
 			background: url('images/prev.png') no-repeat;
 			background-size: contain;
+
+			&:hover {
+				background: url('images/prev-hover.png');
+				opacity: 1;
+			}
 
 			@media only screen and (max-width: 1600px) {
 				left: 14%;
