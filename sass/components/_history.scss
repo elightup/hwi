@@ -264,6 +264,9 @@
 	.history {
 		padding-top: 20px;
 
+		&__title {
+			display: none;
+		}
 
 		&__content {
 			h2 {
