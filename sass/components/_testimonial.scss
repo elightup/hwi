@@ -112,3 +112,17 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 480px) {
+	.testimonial {
+		h2.title {
+			font-size: 20px;
+		}
+
+		&__content {
+			h2 {
+				font-size: 22px;
+			}
+		}
+	}
+}

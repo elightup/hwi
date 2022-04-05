@@ -19,6 +19,7 @@
 			background-size: cover;
 			margin-bottom: 17px;
 		}
+
 		h2 {
 			font-weight: 700;
 			font-size: 48px;
@@ -43,6 +44,12 @@
 			display: grid;
 			grid-template-columns: repeat(1, 1fr);
 			grid-gap: 56px;
+		}
+
+		&__item {
+			h2 {
+				font-size: 30px;
+			}
 		}
 	}
 }

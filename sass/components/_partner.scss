@@ -65,3 +65,13 @@
 		}
 	}
 }
+
+@media all and (max-width: 767px) {
+	.partner {
+		&__top {
+			h2.title {
+				font-size: 30px;
+			}
+		}
+	}
+}
