@@ -79,6 +79,11 @@
 			background: url('images/prev.png') no-repeat;
 			right: 50%;
 			bottom: -27%;
+
+			&:hover {
+				background: url('images/prev-hover.png') no-repeat;
+				opacity: 1;
+			}
 		}
 
 		.slick-next {
@@ -87,6 +92,11 @@
 			background: url('images/next.png') no-repeat;
 			right: 46%;
 			bottom: -27%;
+
+			&:hover {
+				background: url('images/next-hover.png') no-repeat;
+				opacity: 1;
+			}
 		}
 
 		.slick-dots {
