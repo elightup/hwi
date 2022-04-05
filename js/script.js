@@ -332,7 +332,7 @@ jQuery( function ( $ ) {
 
 	function scrollDown() {
 		if ( $( 'body' ).hasClass( 'page-template-front-page' ) ) {
-			$( '.icon_down' ).each( function () {
+			$( '.scrooldow' ).each( function () {
 				var id = $( this ).attr( 'href' );
 				if ( id.includes( 'tel' ) ) {
 					return;

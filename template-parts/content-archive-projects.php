@@ -6,6 +6,7 @@
  *
  * @package HWI
  */
+$projects = get_the_terms( $post->ID, 'project-type' );
 ?>
 <div class="projects__item">
 	<?php the_post_thumbnail(); ?>

@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="container single-project">
 		<div class="breadcrumbs">
-			<?php echo do_shortcode( '[slim_seo_breadcrumbs]' ); ?>
+			<?php echo do_shortcode( '[slim_seo_breadcrumbs separator="/"]' ); ?>
 		</div>
 		<header class="entry-header">
 			<div class="single-project__title">

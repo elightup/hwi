@@ -5,7 +5,7 @@
 	&__wrap {
 		position: relative;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 40% 1fr;
 	}
 
 	&__left {

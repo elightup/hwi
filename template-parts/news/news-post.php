@@ -26,7 +26,7 @@ $query            = new WP_Query( $args );
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 							</div>
 							<div class="news-posts__content">
-								<p class="date"><?= get_the_date( 'd/m/Y' )?></p>
+								<p class="date"><?= get_the_date( 'd F, Y' )?></p>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 							</div>
 						</div>

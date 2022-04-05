@@ -6,7 +6,7 @@ $image       = rwmb_meta( 'image_about' );
 $year_number = rwmb_meta( 'year_number' );
 $description = rwmb_meta( 'description_year' );
 ?>
-<section class="about-home">
+<section class="about-home" id="about">
 	<div class="container">
 		<div class="about-home__wrap">
 			<div class="about-home__left">

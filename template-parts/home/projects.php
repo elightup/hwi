@@ -13,7 +13,7 @@ $query         = new WP_Query( $args );
 	<div class="container">
 		<div class="project-home__top">
 			<h2 class="title"><?= wp_kses_post( $title_project );?></h2>
-			<a href="<?= esc_url( $url );?>" class="seemore"><?= esc_html( $text_link );?><?php Hwi_Icons::render( 'arrow-next' ); ?></a>
+			<a href="<?= esc_url( $url );?>" class="seemore"><?= esc_html( $text_link );?><?php Hwi_Icons::render( 'arrow-nexts' ); ?></a>
 		</div>
 		<div class="project-home__wrap">
 			<img class="project-bg" src="<?= esc_url( $images['full_url'] );?>" alt="">
