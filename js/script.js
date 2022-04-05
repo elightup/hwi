@@ -133,8 +133,10 @@ jQuery( function ( $ ) {
 					settings: {
 						arrows: false,
 						centerMode: true,
-						centerPadding: '80px',
-						slidesToShow: 1
+						centerPadding: '40px',
+						slidesToShow: 2,
+						autoplay: true,
+						autoplaySpeed: 3000,
 					}
 				}
 			]

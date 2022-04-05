@@ -1,26 +1,31 @@
 .partner {
 	position: relative;
 	padding: 0px 0 120px;
+
 	&__top {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
+
 		h2.title {
 			font-size: 48px;
 			color: var(--color-accent);
 			margin: 0;
 			font-weight: 700;
 		}
+
 		.seemore {
 			color: #828282;
 			font-size: 14px;
+
 			svg {
 				margin-left: 10px;
 			}
 		}
 	}
+
 	&__images {
 		--width: 100vw;
 		margin-right: calc(51% - var(--width)/2);
@@ -28,9 +33,11 @@
 		margin-top: 35px;
 		margin-bottom: 35px;
 	}
+
 	&__item {
 		padding: 23px;
 		position: relative;
+
 		&--image {
 			border: 0.6px solid #2F3090;
 			display: flex;
@@ -40,9 +47,21 @@
 			min-height: 100px;
 		}
 	}
+
 	&__description {
 		text-align: right;
 		font-size: 14px;
 		color: var(--color-black);
+		width: 33%;
+		float: right;
+
+		@media only screen and (max-width: 1280px) {
+			width: 50%;
+		}
+
+		@media only screen and (max-width: 767px) {
+			width: 100%;
+			float: inherit;
+		}
 	}
 }
