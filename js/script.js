@@ -222,7 +222,7 @@ jQuery( function ( $ ) {
 			infinite: true,
 			slidesToShow: 4,
 			slidesToScroll: 1,
-			autoplay: true,
+			autoplay: false,
 			autoplaySpeed: 5000,
 			rows: 0,
 			prevArrow: "<button type='button' class='slick-left slick-arrow'></button>",
@@ -263,7 +263,7 @@ jQuery( function ( $ ) {
 					breakpoint: 768,
 					settings: {
 						arrows: false,
-						slidesToShow: 3
+						slidesToShow: 1
 					}
 				},
 				{
