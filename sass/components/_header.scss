@@ -21,6 +21,7 @@
 .site-branding {
 	display: flex;
 	align-items: center;
+	padding: 10px 0;
 
 	@media all and (max-width: 767px) {
 		font-size: 12px;
@@ -34,7 +35,17 @@
 		display: none;
 	}
 
+	a {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+
 	&:hover {
+		svg {
+			fill: #000;
+		}
+
 		.logo-main {
 			display: none;
 		}
@@ -63,7 +74,7 @@
 		content: '';
 		display: block;
 		width: 65px;
-		height: 65px;
+		height: 100%;
 		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 		background: #f2f2f2;
 		position: absolute;

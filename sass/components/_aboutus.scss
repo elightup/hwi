@@ -83,6 +83,7 @@
 
 		p {
 			color: #828282;
+			font-size: 14px;
 		}
 	}
 
@@ -91,10 +92,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: 60px;
+		justify-content: space-between;
 	}
 
 	&__item {
-		width: 25%;
 
 		&:last-child {
 			margin-right: 0;
@@ -264,7 +265,7 @@
 		}
 
 		h3 {
-			font-size: 36px;
+			font-size: 32px;
 			color: var(--color-white);
 			margin: 0 0 20px;
 

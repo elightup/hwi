@@ -32,8 +32,8 @@
 				<a href="<?= esc_url( home_url() );?>">
 					<img class="logo-main" src="<?= esc_url( get_template_directory_uri() );?>/images/logo.svg" alt="">
 					<img class="logo-hover" src="<?= esc_url( get_template_directory_uri() );?>/images/logo-hover.svg" alt="">
+					<?php bloginfo( 'name' ); ?>
 				</a>
-				<?php bloginfo( 'name' ); ?>
 			</div><!-- .site-branding -->
 			<?php
 				get_template_part( 'template-parts/header/menu' );

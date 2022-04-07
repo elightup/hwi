@@ -13,7 +13,11 @@
 	}
 
 	li {
-		padding: 22px 15px 21px;
+		padding: 31px 35px;
+
+		@media only screen and (max-width: 1280px) {
+			padding: 31px 20px;
+		}
 
 		&.current-menu-item {
 			a {
