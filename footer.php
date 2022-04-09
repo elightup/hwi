@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="footer__bottom">
-				<p>© 2022 <b>Hwico</b>. All Rights Resevered.</p>
+				<p>© 2022 <b>Hwico</b>. All Rights Resevered. Design by <a href="https://titanweb.vn/">titanweb.vn</a></p>
 			</div>
 		</div>
 	</footer>
