@@ -33,7 +33,7 @@ $image_banner = rwmb_meta( 'image_banner' );
 					?>
 					<img src="<?= esc_url( $images_ceo ); ?>" alt="">
 					<figcaption>
-						<div class="text-image"><?= esc_html( $content_info ); ?></div>
+						<div class="text-image"><?= wp_kses_post( wpautop( $content_info ) ); ?></div>
 						<div class="ceo-founder">
 							<p class="text-founder"><?= esc_html( $text_founder ); ?></p>
 							<p class="text-name"><?= esc_html( $text_name ); ?></p>
