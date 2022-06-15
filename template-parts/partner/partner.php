@@ -9,13 +9,16 @@ $description   = rwmb_meta( 'description_partner' );
 	<div class="container">
 		<div class="partner__top">
 			<h2 class="title"><?= esc_html( $title_partner );?></h2>
+			<div class="partner__description">
+				<?= wp_kses_post( wpautop( $description ) );?>
+			</div>
 		</div>
-		<div class="partner__images">
+		<div class="partner__wrap">
 			<?php
 			foreach ( $images as $image ) :
 				$img_url = $image['full_url'];
 				?>
-				<div class="partner__item">
+				<div class="partner__wrap-item">
 					<div class="partner__item--image">
 						<img src="<?= esc_url( $img_url );?>" alt="">
 					</div>
@@ -24,8 +27,6 @@ $description   = rwmb_meta( 'description_partner' );
 			endforeach;
 			?>
 		</div>
-		<div class="partner__description">
-			<?= wp_kses_post( wpautop( $description ) );?>
-		</div>
+
 	</div>
 </section>

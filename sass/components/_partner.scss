@@ -34,6 +34,14 @@
 		margin-bottom: 35px;
 	}
 
+	&__wrap {
+		position: relative;
+		display: grid;
+		gap: 50px;
+		grid-template-columns: repeat(7, 1fr);
+		margin-top: 50px;
+	}
+
 	&__item {
 		padding: 23px;
 		position: relative;
@@ -66,12 +74,28 @@
 	}
 }
 
+@media all and (max-width: 1023px) {
+	.partner {
+		&__wrap {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}
+
 @media all and (max-width: 767px) {
 	.partner {
 		&__top {
 			h2.title {
 				font-size: 30px;
 			}
+		}
+	}
+}
+
+@media all and (max-width: 480px) {
+	.partner {
+		&__wrap {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 }

@@ -2,20 +2,11 @@
 	position: relative;
 	padding-top: 55px;
 
-	.text-year {
-		font-weight: 700;
-		font-size: 48px;
-		line-height: 1.3;
-		color: #2F3090;
-		text-align: center;
-		margin: 0 0 50px;
-	}
 
 	&__location {
 		font-weight: 700;
 		font-size: 14px;
 		line-height: 1.3;
-		text-align: center;
 		color: #828282;
 		margin: 0;
 	}
@@ -64,112 +55,7 @@
 		}
 	}
 
-	&__slider {
-		margin-top: 30px;
-		display: flex;
 
-		.slick-list {
-			padding: 0 200px;
-		}
-
-		.slick-left {
-			&::before {
-				content: url('images/year-prev.png');
-			}
-		}
-
-		.slick-right {
-			&::before {
-				content: url('images/year-next.png');
-			}
-		}
-
-		.slick-right {
-			position: absolute;
-			bottom: 6%;
-			right: -7%;
-
-			@media only screen and (max-width: 1400px) {
-				bottom: -20%;
-				right: 0;
-			}
-		}
-
-		.slick-left {
-			position: absolute;
-			left: -7%;
-			bottom: 6%;
-
-			@media only screen and (max-width: 1400px) {
-				bottom: -20%;
-				left: 0;
-			}
-		}
-	}
-
-	&__item {
-		padding: 0 20px;
-
-		&.slick-active {
-			.financial__item--count {
-				opacity: 1;
-			}
-
-			.financial__item--year {
-				color: #2F3090;
-			}
-		}
-
-		&--count {
-			text-align: center;
-			opacity: 0;
-			transition: all 2s ease;
-
-			.count-gray {
-				background: #BDBDBD;
-				color: #fff;
-				font-size: 24px;
-				padding: 25px 30px;
-
-				@media only screen and (max-width: 1400px) {
-					padding: 25px 15px;
-				}
-			}
-
-			.count-blue {
-				background: #2F3090;
-				color: #fff;
-				font-size: 24px;
-				padding: 25px 30px;
-
-				@media only screen and (max-width: 1400px) {
-					padding: 25px 15px;
-				}
-			}
-
-			h3 {
-				margin: 0;
-				font-weight: 400;
-				font-size: 14px;
-			}
-		}
-
-		&--year {
-			font-weight: 700;
-			font-size: 64px;
-			line-height: 1.3;
-			text-align: center;
-			color: #E0E0E0;
-
-			@media only screen and (max-width: 1400px) {
-				font-size: 48px;
-			}
-
-			@media only screen and (max-width: 1280px) {
-				font-size: 36px;
-			}
-		}
-	}
 
 	&__banner {
 		position: relative;
@@ -193,6 +79,55 @@
 			text-align: center;
 		}
 	}
+}
+
+.chart {
+	margin: 0 auto 50px;
+}
+
+@keyframes chartjs-render-animation {
+	from {
+		opacity: .99
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+.chartjs-render-monitor {
+	animation: chartjs-render-animation 1ms
+}
+
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+	position: absolute;
+	direction: ltr;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: -1
+}
+
+.chartjs-size-monitor-expand>div {
+	position: absolute;
+	width: 1000000px;
+	height: 1000000px;
+	left: 0;
+	top: 0
+}
+
+.chartjs-size-monitor-shrink>div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	left: 0;
+	top: 0
 }
 
 @media(max-width:767px) {

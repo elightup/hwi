@@ -17,6 +17,7 @@ $image_banner = rwmb_meta( 'image_banner' );
 	</div>
 </section>
 <section class="ceo">
+	<div class="container">
 	<div class="seo__slider">
 		<?php
 		$slider_ceos = rwmb_meta( 'slider_ceo' );
@@ -31,7 +32,10 @@ $image_banner = rwmb_meta( 'image_banner' );
 					<?php
 					$images_ceo = wp_get_attachment_image_url( $image_ceo, 'full' );
 					?>
-					<img src="<?= esc_url( $images_ceo ); ?>" alt="">
+					<img src="<?= esc_url( get_template_directory_uri() ); ?>/images/logo-team.png" alt="">
+					<h2 class="name"><?= esc_html( $text_name ); ?></h2>
+					<p class="founder"><?= esc_html( $text_founder ); ?></p>
+					<div class="description"><?= wp_kses_post( wpautop( $content_info ) ); ?></div>
 					<figcaption>
 						<div class="text-image"><?= wp_kses_post( wpautop( $content_info ) ); ?></div>
 						<div class="ceo-founder">
@@ -39,12 +43,9 @@ $image_banner = rwmb_meta( 'image_banner' );
 							<p class="text-name"><?= esc_html( $text_name ); ?></p>
 						</div>
 					</figcaption>
-					<div class="seo__item--text">
-						<p class="founder"><?= esc_html( $text_founder ); ?></p>
-						<p class="name"><?= esc_html( $text_name ); ?></p>
-					</div>
 				</div>
 			</div>
 		<?php endforeach; ?>
+	</div>
 	</div>
 </section>

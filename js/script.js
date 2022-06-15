@@ -174,20 +174,6 @@ jQuery( function ( $ ) {
 			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
 			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
 		} );
-		$( '.events__wrap' ).slick( {
-			slidesToShow: 1,
-			dots: true,
-			customPaging: function ( slider, i ) {
-				var thumb = $( slider.$slides[ i ] ).data();
-				return '0' + ( i + 1 );
-			},
-			arrows: true,
-			autoplay: false,
-			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
-			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
-			rows: 0,
-			autoplaySpeed: 5000,
-		} );
 		$( '.hwi-recruitment' ).slick( {
 			slidesToShow: 4,
 			dots: true,
@@ -222,7 +208,7 @@ jQuery( function ( $ ) {
 			arrows: true,
 			dots: false,
 			infinite: true,
-			slidesToShow: 4,
+			slidesToShow: 3,
 			slidesToScroll: 1,
 			autoplay: false,
 			autoplaySpeed: 5000,
@@ -331,6 +317,11 @@ jQuery( function ( $ ) {
 		var galleryList = new List( 'gallery-image', {
 			valueNames: [ 'recruitment__item' ],
 			page: 6,
+			pagination: true
+		} );
+		var eventList = new List( 'event-list', {
+			valueNames: [ 'item-report' ],
+			page: 8,
 			pagination: true
 		} );
 

@@ -193,6 +193,8 @@ function hwi_scripts() {
 	}
 	if ( is_page_template( 'template/about.php' ) ) {
 		hwi_enqueue_style( 'about' );
+		wp_enqueue_script( 'hwi-chart', 'https://cdn2.hubspot.net/hubfs/476360/Chart.js' );
+		wp_enqueue_script( 'hwi-utils', 'https://cdn2.hubspot.net/hubfs/476360/utils.js' );
 	}
 	if ( is_page_template( 'template/partner.php' ) ) {
 		hwi_enqueue_style( 'partner' );
