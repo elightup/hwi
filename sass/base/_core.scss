@@ -3,29 +3,36 @@
 ::after {
 	box-sizing: border-box;
 }
+
 html:focus-within {
 	scroll-behavior: smooth;
 }
+
 @font-face {
 	font-family: OpenSansHebrew;
 	src: url('fonts/opensanshebrew-regular.ttf') format('truetype'),
-	url('fonts/opensanshebrew-bold.ttf') format('truetype'),
-	url('fonts/opensanshebrew-light.ttf') format('truetype');
+		url('fonts/opensanshebrew-bold.ttf') format('truetype'),
+		url('fonts/opensanshebrew-light.ttf') format('truetype');
 }
+
 body {
 	margin: auto;
 	background: var(--color-white);
 	//font-family: var(--font);
 	font-family: var(--font-sans);
+	font-size: var(--text-sm);
 	text-rendering: optimizeSpeed;
 	line-height: 1.36;
 	color: var(--b-txt);
 	-moz-tab-size: 4;
 	tab-size: 4;
 	word-break: break-word;
-	-webkit-tap-highlight-color: transparent; /* Remove the grey highlight on links in iOS */
-	-webkit-text-size-adjust: 100%;  /* Prevent adjustments of font size after orientation changes in iOS. */
+	-webkit-tap-highlight-color: transparent;
+	/* Remove the grey highlight on links in iOS */
+	-webkit-text-size-adjust: 100%;
+	/* Prevent adjustments of font size after orientation changes in iOS. */
 }
+
 h1,
 h2,
 h3,
@@ -50,6 +57,7 @@ audio,
 video {
 	margin: 0 0 1.5rem;
 }
+
 h1,
 h2,
 h3,
@@ -59,42 +67,53 @@ h6 {
 	line-height: 1.25;
 	margin-top: 2rem;
 }
+
 h1 {
 	font-size: 2rem;
 }
+
 h2 {
 	font-size: 1.5rem;
 }
+
 h3 {
 	font-size: 1.25rem;
 }
+
 h4 {
 	font-size: 1rem;
 }
+
 h5 {
 	font-size: .875rem;
 }
+
 h6 {
 	font-size: .75rem;
 }
+
 a {
 	color: var(--b-link);
 	text-decoration: none;
 }
+
 a:hover {
 	text-decoration: underline;
 }
+
 img,
 video,
 svg {
 	max-width: 100%;
 	height: auto;
 }
+
 embed,
 iframe,
 object {
 	max-width: 100%;
 }
+
 iframe {
 	border-style: none;
 }
@@ -104,14 +123,17 @@ abbr[title] {
 	text-decoration: underline;
 	text-decoration: underline dotted;
 }
+
 blockquote {
 	margin-left: 0;
 	padding: .5rem 0 .5rem 1.5rem;
 	border-left: .25rem solid var(--b-txt);
 }
-blockquote > :last-child {
+
+blockquote> :last-child {
 	margin-bottom: 0;
 }
+
 small {
 	font-size: .875rem;
 }
@@ -124,16 +146,20 @@ sup {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sub {
 	bottom: -.25em;
 }
+
 sup {
 	top: -.5em;
 }
 
 hr {
-	height: 0; /* Add the correct box sizing in Firefox. */
-	overflow: visible; /* Show the overflow in Edge and IE. */
+	height: 0;
+	/* Add the correct box sizing in Firefox. */
+	overflow: visible;
+	/* Show the overflow in Edge and IE. */
 
 	border: 0;
 	border-bottom: 1px solid var(--b-line);
@@ -152,12 +178,14 @@ var {
 	font-family: var(--b-font-mono);
 	font-size: .875rem;
 }
+
 pre {
 	padding: 1rem;
 	border-radius: 0;
 	overflow: auto;
 	white-space: pre;
 }
+
 pre code {
 	padding: 0;
 }
@@ -170,17 +198,21 @@ details {
 	border: 1px solid var(--b-line);
 	border-radius: .25rem;
 }
-details > :last-child {
+
+details> :last-child {
 	margin-bottom: 0;
 }
-details[open] > summary {
+
+details[open]>summary {
 	margin-bottom: 1.5rem;
 }
+
 summary {
 	display: list-item;
 	cursor: pointer;
 	font-weight: bold;
 }
+
 summary:focus {
 	box-shadow: none;
 }
@@ -189,18 +221,23 @@ summary:focus {
 table {
 	border-collapse: collapse;
 	width: 100%;
-	text-indent: 0; /* Remove text indentation from table contents in Chrome, Edge, and Safari. */
+	text-indent: 0;
+	/* Remove text indentation from table contents in Chrome, Edge, and Safari. */
 }
+
 table caption {
 	margin-bottom: .5rem;
 }
+
 tr {
 	border-bottom: 1px solid var(--b-line);
 }
+
 td,
 th {
 	padding: .5rem 0;
 }
+
 th {
 	text-align: left;
 }
@@ -211,8 +248,9 @@ ol,
 dd {
 	padding-left: 2rem;
 }
-li > ul,
-li > ol {
+
+li>ul,
+li>ol {
 	margin-bottom: 0;
 }
 
@@ -222,14 +260,17 @@ fieldset {
 	border: 1px solid var(--b-line);
 	border-radius: .25rem;
 }
+
 legend {
 	padding: 0 .25rem;
 }
+
 label {
 	cursor: pointer;
 	display: block;
 	margin-bottom: .25rem;
 }
+
 button,
 input,
 select,
@@ -244,13 +285,16 @@ textarea {
 	line-height: 1.125;
 	color: var(--b-txt);
 }
+
 select,
 input:not([size]):not([type="button" i]):not([type="submit" i]):not([type="reset" i]):not([type="checkbox" i]):not([type="radio" i]) {
 	width: 100%;
 }
+
 [type="color" i] {
 	min-height: 2.125rem;
 }
+
 select:not([multiple]):not([size]) {
 	padding-right: 1.5rem;
 	background-repeat: no-repeat;
@@ -259,10 +303,12 @@ select:not([multiple]):not([size]) {
 	-webkit-appearance: none;
 	appearance: none;
 }
+
 textarea {
 	width: 100%;
 	resize: vertical;
 }
+
 textarea:not([rows]) {
 	height: 8rem;
 }
@@ -281,12 +327,14 @@ button,
 	cursor: pointer;
 	transition: opacity .25s;
 }
+
 button:hover,
 [type="button" i]:hover,
 [type="submit" i]:hover,
 [type="reset" i]:hover {
 	opacity: .75;
 }
+
 button[disabled],
 [type="button" i][disabled],
 [type="submit" i][disabled],
@@ -304,8 +352,10 @@ progress {
  * 2. Correct the outline style in Safari.
  */
 [type="search" i] {
-	-webkit-appearance: textfield; /* 1 */
-	outline-offset: -2px; /* 2 */
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
 }
 
 /* Correct the cursor style of increment and decrement buttons in Chrome. */
@@ -330,8 +380,10 @@ progress {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
 }
 
 /* Remove the inner border and padding of focus outlines in Firefox. */
@@ -354,13 +406,16 @@ progress {
 [aria-busy="true" i] {
 	cursor: progress;
 }
+
 [aria-controls] {
 	cursor: pointer;
 }
+
 [aria-disabled="true" i],
 [disabled] {
 	cursor: not-allowed;
 }
+
 :focus,
 details:focus-within {
 	outline: none;
@@ -371,6 +426,7 @@ details:focus-within {
 	html:focus-within {
 		scroll-behavior: auto;
 	}
+
 	*,
 	::before,
 	::after {

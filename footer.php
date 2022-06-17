@@ -17,7 +17,7 @@
 				<div class="footer__right">
 					<div class="footer__logo">
 						<?php the_custom_logo(); ?>
-						<?php bloginfo( 'name' ); ?>
+						<span><?php bloginfo( 'name' ); ?></span>
 					</div>
 					<div class="footer__discover">
 						<?php dynamic_sidebar( 'discover' ); ?>
@@ -37,6 +37,10 @@
 			</div>
 		</div>
 	</footer>
+	<section class="share_list">
+		<a href="https://www.facebook.com/messages/t/103186704805018" class="item-share" target="_blank"><?php Hwi_Icons::render( 'messenger' ) ?><span>Message</span></a>
+		<a href="tel:0388587655" class="item-share" target="_blank"><?php Hwi_Icons::render( 'phone' ) ?><span>Phone</span></a>
+	</section>
 </div>
 
 <?php wp_footer(); ?>

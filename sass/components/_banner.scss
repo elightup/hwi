@@ -42,6 +42,10 @@
 			}
 		}
 
+		p {
+			padding-right: 220px;
+		}
+
 		.seemore {
 			color: var(--color-white);
 			font-weight: 700;
@@ -99,6 +103,9 @@
 
 		&--item {
 			padding: 35px 15px;
+			min-height: 150px;
+			display: flex !important;
+			align-items: center;
 		}
 	}
 
@@ -106,7 +113,7 @@
 		width: 76px;
 		position: absolute;
 		bottom: 15px;
-		left: 45%;
+		left: 43%;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;

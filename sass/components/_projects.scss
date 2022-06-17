@@ -37,6 +37,10 @@
 			font-size: 14px;
 			color: #828282;
 			font-weight: 400;
+
+			svg {
+				margin-left: 8px;
+			}
 		}
 	}
 
@@ -90,7 +94,7 @@
 			width: 47px;
 			height: 47px;
 			background: url('images/next.png') no-repeat;
-			right: 46%;
+			right: calc(46% - 6px);
 			bottom: -27%;
 
 			&:hover {
@@ -101,7 +105,7 @@
 
 		.slick-dots {
 			bottom: 0;
-			right: 19%;
+			right: calc(100% - 79% - 5px);
 			width: auto;
 
 			li {

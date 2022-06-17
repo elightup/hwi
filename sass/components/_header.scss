@@ -21,7 +21,7 @@
 .site-branding {
 	display: flex;
 	align-items: center;
-	padding: 10px 0;
+	padding: 7px 0;
 
 	@media all and (max-width: 767px) {
 		font-size: 12px;
@@ -39,6 +39,12 @@
 		display: flex;
 		align-items: center;
 		text-decoration: none;
+		font-size: 14px;
+		font-weight: 400;
+
+		span {
+			margin-top: 10px;
+		}
 	}
 
 	&:hover {
@@ -54,8 +60,10 @@
 			display: block;
 		}
 
-		color: var(--color-accent);
-		font-weight: 700;
+		a {
+			color: var(--color-accent);
+			font-weight: 700;
+		}
 	}
 }
 
@@ -67,7 +75,7 @@
 	justify-content: center;
 	--width: 100vw;
 	margin-right: calc(50% - var(--width)/2);
-	background-color: #F2F2F2;
+	background-color: #E0E0E0;
 	padding-right: 60px;
 
 	&::before {
@@ -76,7 +84,7 @@
 		width: 65px;
 		height: 100%;
 		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-		background: #f2f2f2;
+		background: #E0E0E0;
 		position: absolute;
 		left: -64px;
 	}
