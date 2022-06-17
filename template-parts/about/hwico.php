@@ -9,6 +9,7 @@ $groups_history = rwmb_meta( 'group_accordion' );
 		<div class="container">
 			<h2 class="title"><?= esc_html( $location );?></h2>
 			<div class="history-out__wrap">
+				<div class="history-out__slider">
 				<?php
 				foreach ( $groups_history as $history ) :
 					$year    = $history['year'];
@@ -25,6 +26,7 @@ $groups_history = rwmb_meta( 'group_accordion' );
 					<?php
 				endforeach;
 				?>
+				</div>
 			</div>
 		</div>
 	</section>

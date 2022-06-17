@@ -203,6 +203,42 @@ jQuery( function ( $ ) {
 				}
 			]
 		} );
+		$( '.history-out__slider' ).slick( {
+			slidesToShow: 7,
+			dots: true,
+			// customPaging: function ( slider, i ) {
+			// 	var thumb = $( slider.$slides[ i ] ).data();
+			// 	return '0' + ( i + 1 );
+			// },
+			arrows: true,
+			autoplay: false,
+			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
+			nextArrow: "<button type='button' class='slick-next slick-arrow pull-right'></button>",
+			rows: 0,
+			autoplaySpeed: 5000,
+			responsive: [
+				{
+					breakpoint: 1400,
+					settings: {
+						arrows: false,
+						slidesToShow: 5,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+					}
+				}
+			]
+		} );
 
 		$( '.seo__slider' ).slick( {
 			arrows: true,

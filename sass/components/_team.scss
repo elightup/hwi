@@ -49,11 +49,14 @@
 
 .seo {
 	&__slider {
+		.slick-list {
+			margin: 0 -10px;
+		}
 
 		.slick-right {
 			position: absolute;
 			top: 50%;
-			right: -47px;
+			right: -50px;
 			width: 47px;
 			height: 47px;
 			background: url('images/next.png') no-repeat;
@@ -67,7 +70,7 @@
 
 		.slick-left {
 			position: absolute;
-			left: -47px;
+			left: -50px;
 			top: 50%;
 			width: 47px;
 			height: 47px;
@@ -186,6 +189,7 @@
 				font-weight: 700;
 				text-transform: uppercase;
 				text-align: center;
+				margin-bottom: 35px;
 			}
 
 			figcaption {

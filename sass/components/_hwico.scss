@@ -225,9 +225,9 @@
 		margin-right: calc(51% - var(--width)/2);
 		margin-left: calc(51% - var(--width)/2);
 		padding: 0 107px;
-		display: grid;
-		gap: 45px;
-		grid-template-columns: repeat(7, 1fr);
+		// display: grid;
+		// gap: 45px;
+		// grid-template-columns: repeat(7, 1fr);
 		margin-top: 40px;
 
 		@media all and (max-width: 1600px) {
@@ -247,6 +247,7 @@
 
 	&__item {
 		position: relative;
+		padding: 0 10px;
 
 		h3 {
 			margin: 0;
@@ -315,12 +316,12 @@
 		&::before {
 			content: '';
 			display: block;
-			width: calc(100% - 12%);
+			width: calc(100% - 17%);
 			height: 2px;
 			background: #2F3090;
 			position: absolute;
 			top: 50%;
-			right: calc(12% - 100%);
+			right: calc(17% - 100%);
 
 			@media all and (max-width: 1600px) {
 				display: none;
@@ -393,7 +394,6 @@
 			flex-wrap: wrap;
 
 			.except {
-				width: calc(100% - 180px);
 				display: flex;
 				align-items: center;
 			}
