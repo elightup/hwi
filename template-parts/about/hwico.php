@@ -54,7 +54,7 @@ $groups_history = rwmb_meta( 'group_accordion' );
 							<img src="<?= esc_url( $icons ); ?>" alt="" class="icon-image">
 							<img src="<?= esc_url( $icons_hover ); ?>" alt="" class="icon-hover">
 						</div>
-						<p class="item-title"><?= esc_html( $title ); ?></p>
+						<div class="item-title"><?= wp_kses_post( wpautop( $title ) ); ?></div>
 					</div>
 					<div class="hwico__item--content">
 						<p><?= wp_kses_post( wpautop( $content ) ); ?></p>

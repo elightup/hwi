@@ -50,13 +50,13 @@
 .seo {
 	&__slider {
 		.slick-list {
-			margin: 0 -10px;
+			margin: 0 -19px;
 		}
 
 		.slick-right {
 			position: absolute;
 			top: 50%;
-			right: -50px;
+			right: -63px;
 			width: 47px;
 			height: 47px;
 			background: url('images/next.png') no-repeat;
@@ -70,7 +70,7 @@
 
 		.slick-left {
 			position: absolute;
-			left: -50px;
+			left: -63px;
 			top: 50%;
 			width: 47px;
 			height: 47px;
@@ -88,7 +88,7 @@
 		width: 100%;
 		position: relative;
 		//padding-right: 20px;
-		padding: 0 10px;
+		padding: 0 19px;
 
 		&--text {
 			background-color: #fff;
@@ -229,7 +229,7 @@
 					}
 
 					&::-webkit-scrollbar-thumb {
-						background: var(--color-accent);
+						background: #ccc;
 						border-radius: 10px;
 					}
 				}

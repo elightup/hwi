@@ -1,7 +1,7 @@
 .hwico {
 	position: relative;
 	background-image: url('images/bg_about-min.png');
-	padding-top: 120px;
+	padding-top: 106px;
 	background-position: bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -76,7 +76,7 @@
 
 		&--title {
 			display: flex;
-			align-items: center;
+			align-items: end;
 			margin-bottom: 28px;
 			position: relative;
 
@@ -95,6 +95,10 @@
 				color: #828282;
 				font-weight: 700;
 				padding: 0 18px;
+
+				p {
+					margin: 0;
+				}
 			}
 		}
 
