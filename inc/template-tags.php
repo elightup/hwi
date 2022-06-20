@@ -215,6 +215,7 @@ function hwi_recruitment_posts() {
 	?>
 	<section class="related-posts">
 		<div class="container">
+			<h2 class="title">Relate</h2>
 			<div class="hwi-recruitment">
 				<?php
 				while ( $query->have_posts() ) :

@@ -353,7 +353,9 @@ jQuery( function ( $ ) {
 		var galleryList = new List( 'gallery-image', {
 			valueNames: [ 'recruitment__item' ],
 			page: 6,
-			pagination: true
+			pagination: {
+				outerWindow: 2,
+			}
 		} );
 		var eventList = new List( 'event-list', {
 			valueNames: [ 'item-report' ],

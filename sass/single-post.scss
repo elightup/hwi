@@ -139,6 +139,13 @@
 	background: #E0E0E0;
 	padding: 50px 0;
 
+	h2.title {
+		font-size: 36px;
+		color: #2F3090;
+		font-weight: 700;
+		margin: 0 0 25px;
+	}
+
 	&__heading {
 		font-size: 30px;
 		font-weight: 700;
@@ -285,6 +292,10 @@
 	.recruitment__item {
 		position: relative;
 		padding: 0 24px;
+	}
+
+	.slick-list {
+		margin: 0 -24px;
 	}
 
 	.recruitment__image {
