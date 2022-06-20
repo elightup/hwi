@@ -10,6 +10,10 @@
 		justify-content: space-between;
 		margin: 0 0 50px;
 
+		@media all and (max-width: 767px) {
+			margin: 0 0 20px;
+		}
+
 		h2.title {
 			font-size: 14px;
 			color: var(--color-black);
@@ -226,6 +230,8 @@
 
 @media only screen and (max-width: 767px) {
 	.project-home {
+		padding-bottom: 12px;
+
 		&__image {
 			width: 100%;
 		}

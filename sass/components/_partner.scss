@@ -84,10 +84,20 @@
 
 @media all and (max-width: 767px) {
 	.partner {
+		padding-bottom: 50px;
+
 		&__top {
 			h2.title {
 				font-size: 30px;
 			}
+		}
+
+		&__images {
+			margin: 15px 0;
+		}
+
+		&__item {
+			padding: 20px 10px;
 		}
 	}
 }

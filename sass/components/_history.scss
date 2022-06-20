@@ -264,6 +264,10 @@
 	.history {
 		padding-top: 20px;
 
+		&__right {
+			margin-top: 0;
+		}
+
 		&__title {
 			display: none;
 		}
@@ -271,6 +275,7 @@
 		&__content {
 			h2 {
 				font-size: 32px;
+				text-align: left;
 			}
 		}
 

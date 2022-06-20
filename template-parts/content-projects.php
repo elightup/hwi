@@ -30,7 +30,9 @@
 		</header><!-- .entry-header -->
 		<div class="single-project__wrap">
 			<div class="single-project__thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<div class="entry-thumbnail">
+					<?php the_post_thumbnail(); ?>
+				</div>
 			</div>
 			<div class="single-project__content">
 				<div class="entry-top">

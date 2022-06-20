@@ -3,7 +3,7 @@
 	font-size: var(--text-md);
 	z-index: 1;
 	font-family: var(--font-poppins);
-	margin-right: 20px;
+	margin-right: 22px;
 
 	ul {
 		display: flex;
@@ -255,8 +255,11 @@
 			display: block;
 			position: absolute;
 			top: 36px;
+			right: 0;
+			margin: 0;
 			background: #F2F2F2;
 			width: max-content;
+			min-width: 200px;
 
 			ul {
 				display: block;
