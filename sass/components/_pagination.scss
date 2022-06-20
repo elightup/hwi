@@ -56,6 +56,10 @@
 
 .archive-description {
 	color: var(--color-grey);
+
+	@media all and (max-width: 767px) {
+		text-align: justify;
+	}
 }
 
 .nav-pagination,
