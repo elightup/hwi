@@ -246,11 +246,19 @@
 			padding-left: 100px;
 		}
 
+		@media all and (max-width: 767px) {
+			padding-left: 0;
+		}
+
 		h2.widget-title {
 			font-size: 24px;
 			color: var(--color-accent);
 			margin: 0 0 15px;
 			padding: 0 30px;
+
+			@media all and (max-width: 767px) {
+				padding-left: 0;
+			}
 		}
 
 		form {
