@@ -108,8 +108,9 @@
 		&--item {
 			padding: 35px 15px;
 			min-height: 150px;
-			// display: flex !important;
-			// align-items: center;
+			display: flex !important;
+			flex-direction: column;
+			justify-content: center;
 
 			@media all and (max-width: 767px) {
 				min-height: auto;
