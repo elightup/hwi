@@ -80,6 +80,14 @@
 			margin-bottom: 28px;
 			position: relative;
 
+			@media all and (max-width: 767px) {
+				align-items: inherit;
+			}
+
+			.icon {
+				margin-top: 5px;
+			}
+
 			.icon-image {
 				display: block;
 			}
