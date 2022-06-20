@@ -54,5 +54,5 @@ $banners = rwmb_meta( 'slider' );
 		endforeach;
 		?>
 	</div>
-	<a href="#about" class="scrooldow"><img src="<?= esc_url( get_template_directory_uri() );?>/images/scroll.png" alt="">Scroll down</a>
+	<a href="#about" class="scrooldow"><img src="<?= esc_url( get_template_directory_uri() );?>/images/scroll9.gif" alt="">Scroll down</a>
 </section>
