@@ -240,7 +240,7 @@ jQuery( function ( $ ) {
 			]
 		} );
 
-		$( '.seo__slider' ).slick( {
+		$( '.seo__slider, .vision__inner' ).slick( {
 			arrows: true,
 			dots: false,
 			infinite: true,
