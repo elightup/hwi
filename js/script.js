@@ -4,6 +4,7 @@ jQuery( function ( $ ) {
 
 	function toggleMenu() {
 		const nav = document.querySelector( '#site-navigation' );
+		//const div = document.getElementById( '#home-menu' );
 		if ( !nav ) {
 			return;
 		}
@@ -11,15 +12,19 @@ jQuery( function ( $ ) {
 			button = document.querySelector( '.menu-toggle' );
 
 		menu.setAttribute( 'aria-expanded', 'false' );
-		button.addEventListener( 'click', () => {
-			console.log( 'click' );
-			if ( nav.classList.contains( 'is-open' ) ) {
-				button.setAttribute( 'aria-expanded', 'false' );
-				menu.setAttribute( 'aria-expanded', 'false' );
-			} else {
-				button.setAttribute( 'aria-expanded', 'true' );
-				menu.setAttribute( 'aria-expanded', 'true' );
-			}
+		button.addEventListener( 'click', ( e ) => {
+			e.preventDefault();
+			console.log( e.target );
+			// if ( ( nav.style.display === '' || nav.style.display === 'none' ) && ( e.target === button ) ) {
+			// 	console.log( 's' );
+			// 	nav.style.display = 'block';
+			// } else if ( ( nav.style.display === '' || nav.style.display === 'none' ) && ( e.target !== button ) ) {
+			// 	console.log( 'a' );
+			// 	//nav.style.display = 'block';
+			// 	nav.classList.addClass = 'is-open';
+			// } else {
+			// 	nav.style.display = 'none';
+			// }
 			nav.classList.toggle( 'is-open' );
 		} );
 	}
@@ -78,13 +83,13 @@ jQuery( function ( $ ) {
 	let slickSlide = () => {
 		$( '.banner__wrap' ).slick( {
 			slidesToShow: 1,
-			centerMode: false,
-			centerPadding: '60px',
-			dots: false,
+			slidesToScroll: 1,
+			fade: true,
 			arrows: false,
 			autoplay: false,
 			rows: 0,
 			autoplaySpeed: 5000,
+			asNavFor: '.banner__nav'
 		} );
 		$( '.banner__nav' ).slick( {
 			slidesToShow: 4,
