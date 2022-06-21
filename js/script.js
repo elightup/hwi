@@ -121,7 +121,7 @@ jQuery( function ( $ ) {
 					}
 				},
 				{
-					breakpoint: 768,
+					breakpoint: 992,
 					settings: {
 						arrows: false,
 						centerMode: true,
@@ -288,7 +288,7 @@ jQuery( function ( $ ) {
 					}
 				},
 				{
-					breakpoint: 767,
+					breakpoint: 992,
 					settings: {
 						slidesToShow: 2,
 						slidesToScroll: 2,
@@ -297,7 +297,7 @@ jQuery( function ( $ ) {
 				{
 					breakpoint: 480,
 					settings: {
-						slidesToShow: 2,
+						slidesToShow: 1,
 						slidesToScroll: 1,
 					}
 				}

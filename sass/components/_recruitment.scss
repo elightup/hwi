@@ -76,6 +76,10 @@
 			margin: 0;
 		}
 
+		p {
+			margin: 0;
+		}
+
 		h3 {
 			font-family: var(--font-sans);
 			font-size: 14px;
@@ -102,6 +106,10 @@
 			.list {
 				grid-template-columns: repeat(2, 1fr);
 			}
+		}
+
+		&__content {
+			padding-bottom: 0;
 		}
 	}
 }

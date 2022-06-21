@@ -234,6 +234,12 @@
 
 		&__wrap {
 			grid-template-columns: repeat(1, 1fr);
+
+			.item-report {
+				&::before {
+					margin-right: 10px;
+				}
+			}
 		}
 
 		&__image {
