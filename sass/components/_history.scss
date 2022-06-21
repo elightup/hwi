@@ -260,6 +260,28 @@
 	}
 }
 
+@media all and (max-width: 992px) {
+	.history {
+		padding-top: 20px;
+
+		&__title {
+			display: none;
+		}
+
+		&__counter {
+			.item {
+				margin-right: 0;
+			}
+		}
+
+		&__content {
+			h2 {
+				text-align: left;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 767px) {
 	.history {
 		padding-top: 20px;

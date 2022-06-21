@@ -226,6 +226,13 @@ jQuery( function ( $ ) {
 					}
 				},
 				{
+					breakpoint: 992,
+					settings: {
+						arrows: false,
+						slidesToShow: 3,
+					}
+				},
+				{
 					breakpoint: 768,
 					settings: {
 						arrows: false,
@@ -258,6 +265,12 @@ jQuery( function ( $ ) {
 					settings: {
 						slidesToShow: 3,
 						dots: true,
+					}
+				},
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
 					}
 				},
 				{

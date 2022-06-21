@@ -58,6 +58,16 @@
 	}
 }
 
+@media all and (max-width: 992px) {
+	.vision {
+		&__inner {
+			.slick-list {
+				margin: 0;
+			}
+		}
+	}
+}
+
 @media(max-width:767px) {
 	.vision {
 		padding: 50px 0;
