@@ -319,6 +319,14 @@
 				z-index: 2;
 			}
 		}
+
+		&__item {
+			&--image {
+				.description {
+					height: 60px;
+				}
+			}
+		}
 	}
 }
 
