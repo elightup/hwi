@@ -296,6 +296,8 @@
 
 @media all and (max-width: 992px) {
 	.team {
+		padding-top: 50px !important;
+
 		&__title {
 			width: 100%;
 		}
@@ -311,6 +313,10 @@
 		&__slider {
 			.slick-list {
 				margin: 0;
+			}
+
+			.slick-left {
+				z-index: 2;
 			}
 		}
 	}
