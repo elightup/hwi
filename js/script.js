@@ -229,7 +229,7 @@ jQuery( function ( $ ) {
 					breakpoint: 992,
 					settings: {
 						arrows: false,
-						slidesToShow: 3,
+						slidesToShow: 2,
 					}
 				},
 				{
@@ -260,13 +260,6 @@ jQuery( function ( $ ) {
 			prevArrow: "<button type='button' class='slick-left slick-arrow'></button>",
 			nextArrow: "<button type='button' class='slick-right slick-arrow'></button>",
 			responsive: [
-				{
-					breakpoint: 1280,
-					settings: {
-						slidesToShow: 3,
-						dots: true,
-					}
-				},
 				{
 					breakpoint: 992,
 					settings: {
