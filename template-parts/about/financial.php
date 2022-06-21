@@ -33,7 +33,7 @@ foreach ( $groups_slider as $highlight ) {
 					<div class=""></div>
 				</div>
 			</div>
-			<canvas id="canvas" style="display: block; width: 1379px; height: 689px;" width="1379" height="689" class="chartjs-render-monitor"></canvas>
+			<canvas id="canvas" style="display: block; width: 1379px; height: 689px;max-height: 100vh" width="1379" height="689" class="chartjs-render-monitor"></canvas>
 		</div>
 	</div>
 	<div class="financial__banner">
@@ -103,14 +103,4 @@ foreach ( $groups_slider as $highlight ) {
 		window.myLine = new Chart(ctx, config);
 	};
 
-	// document.getElementById('randomizeData').addEventListener('click', function() {
-	// 	config.data.datasets.forEach(function(dataset) {
-	// 		dataset.data = dataset.data.map(function() {
-	// 			return randomScalingFactor();
-	// 		});
-
-	// 	});
-
-	// 	window.myLine.update();
-	// });
 </script>
