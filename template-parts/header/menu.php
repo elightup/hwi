@@ -15,6 +15,6 @@
 		<?php dynamic_sidebar( 'languages' ) ?>
 	</div>
 	<button class="menu-toggle header-icon" aria-controls="primary-menu" aria-expanded="false">
-		<?php Hwi_Icons::render( 'menu' ) ?>
+		<div id="itag"><?php Hwi_Icons::render( 'menu' ) ?></div>
 	</button>
 </div>

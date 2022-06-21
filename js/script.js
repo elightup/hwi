@@ -4,29 +4,25 @@ jQuery( function ( $ ) {
 
 	function toggleMenu() {
 		const nav = document.querySelector( '#site-navigation' );
+		//const nav = document.querySelector( '#home-menu' );
 		//const div = document.getElementById( '#home-menu' );
 		if ( !nav ) {
 			return;
 		}
+		const $menu = $( '#site-navigation' );
 		const menu = nav.querySelector( 'ul' ),
 			button = document.querySelector( '.menu-toggle' );
-
-		menu.setAttribute( 'aria-expanded', 'false' );
-		button.addEventListener( 'click', ( e ) => {
-			e.preventDefault();
-			console.log( e.target );
-			// if ( ( nav.style.display === '' || nav.style.display === 'none' ) && ( e.target === button ) ) {
-			// 	console.log( 's' );
-			// 	nav.style.display = 'block';
-			// } else if ( ( nav.style.display === '' || nav.style.display === 'none' ) && ( e.target !== button ) ) {
-			// 	console.log( 'a' );
-			// 	//nav.style.display = 'block';
-			// 	nav.classList.addClass = 'is-open';
-			// } else {
-			// 	nav.style.display = 'none';
-			// }
+		//button = document.getElementById( '.menu-toggle' );
+		$( document ).mouseup( e => {
+			if ( !$menu.is( e.target ) && $menu.has( e.target ).length === 0 ) // ... nor a descendant of the container
+			{
+				$menu.removeClass( 'is-open' );
+			}
+		} );
+		button.addEventListener( 'click', () => {
 			nav.classList.toggle( 'is-open' );
 		} );
+
 	}
 
 	function closeMenu() {
