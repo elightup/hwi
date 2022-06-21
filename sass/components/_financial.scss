@@ -130,6 +130,12 @@
 	top: 0
 }
 
+@media all and (max-width: 992px) {
+	.financial {
+		padding-top: 50px;
+	}
+}
+
 @media(max-width:767px) {
 	.financial {
 		.team__title {
