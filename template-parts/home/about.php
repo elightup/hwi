@@ -14,12 +14,12 @@ $description = rwmb_meta( 'description_year' );
 				<div class="about-home__image">
 					<img src="<?= esc_url( $image['full_url'] );?>" alt="<?= esc_html( $title );?>">
 					<div class="about-home__image--content">
-						<h2><?= esc_html( $year_number );?></h2>
-						<h3><?= esc_html( $description );?></h3>
+						<h2 class="fadeInUp wow" data-wow-duration="1s" data-wow-delay="0s"><?= esc_html( $year_number );?></h2>
+						<h3 class="fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0s"><?= esc_html( $description );?></h3>
 					</div>
 				</div>
 			</div>
-			<div class="about-home__right">
+			<div class="about-home__right fadeInUp wow" data-wow-duration="1s" data-wow-delay="0s">
 				<?= wp_kses_post( wpautop( $about ) );?>
 				<div class="about-home__number">
 					<?php

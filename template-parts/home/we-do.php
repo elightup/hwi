@@ -12,7 +12,7 @@ $works = rwmb_meta( 'we_do_it' );
 				$text_link   = $work['text_link'];
 				$url         = $work['url'];
 				?>
-				<div class="we-do__item">
+				<div class="we-do__item fadeInUp wow" data-wow-duration="1s" data-wow-delay="0s">
 					<div class="we-do__image">
 						<?php
 						echo wp_get_attachment_image( $image, 'full', false );

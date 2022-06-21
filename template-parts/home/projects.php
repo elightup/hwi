@@ -25,10 +25,10 @@ $query         = new WP_Query( $args );
 						?>
 						<div class="project-home__item">
 							<div class="project-home__inner">
-								<div class="project-home__image">
+								<div class="project-home__image fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0s">
 									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 								</div>
-								<div class="project-home__content">
+								<div class="project-home__content fadeInRight wow" data-wow-duration="1s" data-wow-delay="0s">
 									<?php
 									$projects = get_the_terms( $post->ID, 'project-type' );
 									?>

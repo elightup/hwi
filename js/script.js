@@ -501,8 +501,8 @@ jQuery( function ( $ ) {
 		} );
 	}
 
-	// var wow = new WOW();
-	// wow.init();
+	var wow = new WOW();
+	wow.init();
 
 	keepFocusInMenu();
 	toggleMenu();
