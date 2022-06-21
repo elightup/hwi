@@ -160,7 +160,7 @@ jQuery( function ( $ ) {
 					breakpoint: 600,
 					settings: {
 						dots: true,
-						arrows: false
+						arrows: true
 					}
 				}
 			]

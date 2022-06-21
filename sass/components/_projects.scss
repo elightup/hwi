@@ -228,6 +228,16 @@
 	}
 }
 
+@media only screen and (max-width: 992px) {
+	.project-home {
+		&__list {
+			.slick-dots {
+				bottom: -20px;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 767px) {
 	.project-home {
 		padding-bottom: 12px;
@@ -243,9 +253,28 @@
 
 		&__list {
 
-			.slick-next,
+			.slick-next {
+				bottom: 42%;
+				right: 0;
+				width: 40px;
+				height: 40px;
+				background-size: cover;
+
+				&:hover {
+					background-size: cover;
+				}
+			}
+
 			.slick-prev {
-				display: none;
+				bottom: 42%;
+				right: 49px;
+				width: 40px;
+				height: 40px;
+				background-size: cover;
+
+				&:hover {
+					background-size: cover;
+				}
 			}
 
 			.slick-dots {
