@@ -251,7 +251,7 @@ jQuery( function ( $ ) {
 		$( '.seo__slider, .vision__inner' ).slick( {
 			arrows: true,
 			dots: false,
-			infinite: true,
+			//infinite: true,
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			autoplay: false,
