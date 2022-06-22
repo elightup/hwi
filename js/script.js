@@ -207,10 +207,6 @@ jQuery( function ( $ ) {
 		$( '.history-out__slider' ).slick( {
 			slidesToShow: 7,
 			dots: true,
-			// customPaging: function ( slider, i ) {
-			// 	var thumb = $( slider.$slides[ i ] ).data();
-			// 	return '0' + ( i + 1 );
-			// },
 			arrows: true,
 			autoplay: false,
 			prevArrow: "<button type='button' class='slick-prev slick-arrow pull-left'></button>",
@@ -442,27 +438,7 @@ jQuery( function ( $ ) {
 				}
 			} );
 		};
-		if ( $( 'body' ).hasClass( 'page-template-about' ) ) {
 
-			$( window ).scroll( function () {
-				var oTop = $( '.financial' ).offset().top - window.innerHeight;
-				if ( a == 0 && $( window ).scrollTop() > oTop ) {
-					//console.log( 'kkk' );
-					$( '.count' ).each( function () {
-						$( this ).prop( 'Counter', 0 ).animate( {
-							Counter: $( this ).text()
-						}, {
-							duration: 4000,
-							easing: 'swing',
-							step: function ( now ) {
-								$( this ).text( Math.ceil( now ) );
-							}
-						} );
-					} );
-					a = 1;
-				}
-			} );
-		};
 	}
 
 	function scrollToTop() {

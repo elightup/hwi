@@ -33,7 +33,7 @@ foreach ( $groups_slider as $highlight ) {
 					<div class=""></div>
 				</div>
 			</div>
-			<canvas id="canvas" style="display: block; width: 1379px; height: 689px;max-height: 100vh" width="1379" height="689" class="chartjs-render-monitor"></canvas>
+			<canvas id="canvas" style="display: block; max-height: 100vh" class="chartjs-render-monitor"></canvas>
 		</div>
 	</div>
 	<div class="financial__banner">
@@ -61,7 +61,6 @@ foreach ( $groups_slider as $highlight ) {
 				borderColor: window.chartColors.blue,
 				fill: false,
 				data: <?php echo json_encode( $turn_over ); ?>,
-
 			}]
 		},
 		options: {
@@ -73,24 +72,20 @@ foreach ( $groups_slider as $highlight ) {
 			scales: {
 				xAxes: [{
 					display: true,
-		  scaleLabel: {
-			display: true,
-			labelString: 'Year'
-		  },
-
+					scaleLabel: {
+						display: true,
+						labelString: 'Year'
+					},
 				}],
 				yAxes: [{
 					display: true,
-					//type: 'logarithmic',
-					  scaleLabel: {
+					scaleLabel: {
 						display: true,
 						labelString: 'Financial highlight'
 					},
 					ticks: {
 						min: 0,
 						max: 1200,
-
-						// forces step size to be 5 units
 						stepSize: 100
 					}
 				}]
@@ -98,9 +93,15 @@ foreach ( $groups_slider as $highlight ) {
 		}
 	};
 
-	window.onload = function() {
-		var ctx = document.getElementById('canvas').getContext('2d');
-		window.myLine = new Chart(ctx, config);
-	};
-
+	window.addEventListener( "scroll", function() {
+		var x = pageYOffset;
+		console.log(x);
+		if (x > 3000) {
+			console.log('sdf');
+			window.onload = function() {
+				var ctx = document.getElementById('canvas').getContext('2d');
+				window.myLine = new Chart(ctx, config);
+			};
+		}
+	} );
 </script>
