@@ -139,7 +139,7 @@
 		flex-wrap: wrap;
 		width: 100%;
 		margin-top: 31px;
-		margin-bottom: 35px;
+		margin-bottom: 25px;
 
 		p {
 			font-weight: 700;
@@ -171,6 +171,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		margin: 0 -10px;
 		margin-bottom: 16px;
 	}
 
@@ -215,7 +216,6 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	margin: 0 -10px;
 
 	.nav-pagination {
 		margin: 10px 0px 23px;
@@ -225,11 +225,11 @@
 @media all and (max-width: 992px) {
 	.single-project {
 		&__title {
-			width: 86%;
+			width: 100%;
 		}
 
 		&__back {
-			width: 14%;
+			width: 100%;
 		}
 
 		&__thumbnail {
