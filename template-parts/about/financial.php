@@ -93,15 +93,8 @@ foreach ( $groups_slider as $highlight ) {
 		}
 	};
 
-	window.addEventListener( "scroll", function() {
-		var x = pageYOffset;
-		console.log(x);
-		if (x > 3000) {
-			console.log('sdf');
-			window.onload = function() {
-				var ctx = document.getElementById('canvas').getContext('2d');
-				window.myLine = new Chart(ctx, config);
-			};
-		}
-	} );
+	window.onload = function() {
+		var ctx = document.getElementById('canvas').getContext('2d');
+		window.myLine = new Chart(ctx, config);
+	};
 </script>
